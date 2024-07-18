@@ -1,0 +1,95 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+#pragma kernel CSUpdate
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+
+//First neighborhood, supossed to get array of int2 containing all the offsets
+StructuredBuffer<int2> CircleBuffer; //READ ONLY
+
+
+
+int N1Size;
+int N2Size;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    int2 uv= id.xy-10;
+    float radius= distance(uv, int2(0,0));
+    
+    Result[id.xy] = (radius<9 && radius >=5) ? float4(1,1,1,1) : float4(0,0,0,1);
+}
+
+[numthreads(8,8,1)]
+void CSMNCA (uint3 id : SV_DispatchThreadID)
+{
+    
+    int2 uv= id.xy-10;
+    
+    Result[id.xy]=float4(,0,0,1);
+    for(int i=0; i<32; i++){
+
+        Result[id.xy+CircleBuffer[i]]==float4(1,1,1,1);
+    }
+    
+    
+    
+    
+   
+}
+
+// [numthreads(8,8,1)]
+// void CSSlack (uint3 id : SV_DispatchThreadID)
+// {
+//     // TODO: insert actual code here!
+
+//     //Calculations for each neighborhood
+//     int sum1=0;
+//     for (int i = 0; i < N1Size; ++i)
+//     {
+//         float2 off = neighborhood1[i];
+//         if (Result[id.xy + int2(off.x, off.y)] > 0)
+//         {
+//             sum1++;
+//         }
+//     }
+//     // float avg1= sum1/size(neighborhood1)?? gotta figure out how to get the size
+//     float avg1=1
+
+
+//     int sum2=0; 
+//     for (int i = 0; i < N2Size; ++i)
+//     {
+//         float2 off = neighborhood1[i];
+//         if (Result[id.xy + int2(off.x, off.y)] > 0)
+//         {
+//             sum2++;
+//         }
+//     }
+//     //float avg2 = sum2/size(neighborhood2)
+//     float avg2=1;
+
+
+//     //RULES! 
+
+//     //Slackemnaz MNCA Rules
+
+//     //First Neighborhood
+//     (avg1>=0.21 && avg1<=0.22)? Result[id.xy] = float4(1,1,1,1);
+//     (avg1>=0.35 && avg1<=0.5)? Result[id.xy] = float4(0,0,0,1);
+//     (avg1>=0.75 && avg1<=0.85)? Result[id.xy] = float4(0,0,0,1);
+
+//     //Second neighborhood
+//     (avg2>=0.1 && avg2<=0.28)? Result[id.xy] = float4(0,0,0,1);
+//     (avg2>=0.43 && avg2<=0.55)? Result[id.xy] = float4(1,1,1,1);
+//     (avg2>=0.1 && avg2<=0.28)? Result[id.xy] = float4(0,0,0,1);
+
+    
+
+
+
+//     Result[id.xy] = float4(0,0,0,1);
+// }

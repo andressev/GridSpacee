@@ -1,0 +1,161 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSInit
+#pragma kernel CSMNCA
+#pragma kernel CSUpdateConway
+#pragma kernel CSBugs
+
+
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+
+//Screen variables defined in csharp script
+int height;
+int width; 
+
+//Neighborhood offsets
+StructuredBuffer<uint2> CircleBuffer;
+StructuredBuffer<uint2> SquareBuffer;
+int offsetSize;
+
+
+//Rule ranges
+float range1; 
+float range2; 
+float range3;
+
+//Struct
+
+
+//RANDOM float generator 0-1
+float rand(uint3 id)
+{
+    uint2 uv= id.xy;
+    float2 noise = (frac(sin(dot(uv ,float2(12.9898,78.233)*2.0)) * 43758.5453));
+    return abs(noise.x + noise.y) * 0.5;
+}
+
+
+//Set noise
+[numthreads(8,8,1)] 
+void CSInit (uint3 id : SV_DispatchThreadID) //id is a uint3 becasue it refers to the specific thread that is being run, accomodate in a tenser per say?
+{
+    
+
+    bool spawn= (rand(id)>0.5); //control density of noise
+
+
+    Result[id.xy] = spawn ? float4(1.0,1.0,1.0,1.0) : float4(0.0, 0.0,0.0,1.0); 
+    //Result is a pixel RGBA where the adress can be accesed as a matrix and we 
+}
+
+[numthreads(8,8,1)]
+void CSMNCA (uint3 id : SV_DispatchThreadID)
+{
+    
+    int avg= 0; 
+    
+    for(int i=0; i<offsetSize; i++){
+        if(Result[id.xy+CircleBuffer[i]].x>0){
+            avg++;
+            
+        } 
+    }
+    
+    avg= avg/offsetSize;
+    
+    
+    int outputVal= Result[id.xy].x; //STARTS w our value on red
+    
+    if(avg>0 && avg<=range1){
+        outputVal=0;
+    }
+    if(avg>range1 && avg<=range2){
+        outputVal=0;
+    }
+    if(avg>range2 && avg<=range3){
+        outputVal=1;
+    }
+    
+
+    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1.);
+    if(avg>10){
+        Result[id.xy]=float4(1,0,1, 1.);
+    }
+}
+
+[numthreads(8,8,1)]
+void CSUpdateConway (uint3 id : SV_DispatchThreadID)
+{
+   
+
+
+    int sum = 0;
+
+    //Offset loop continues when no offset.
+    for (int x = -1; x <= 1; x++) {
+        for (int y = -1; y <= 1; y++) {
+            if (x == 0 && y == 0) continue;            
+            if (Result[id.xy + uint2(x,y)].x > 0) sum++; //we check the textue on the position plus offset to see if alive
+        }
+    }
+    
+    
+    if (Result[id.xy].x > 0) 
+    {
+        Result[id.xy] = (sum == 2 || sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
+    }
+    else 
+    {
+        Result[id.xy] = (sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
+    }
+
+  
+    
+}
+
+
+[numthreads(8,8,1)]
+void CSBugs (uint3 id : SV_DispatchThreadID)
+{
+   
+    int avg=0;
+    for(int i=0; i<121; i++){
+        if(Result[id.xy+SquareBuffer[i]].x>0){
+            avg++;
+            
+        } 
+    }
+
+    
+
+    
+    int outputVal= Result[id.xy].x; //STARTS w our value on red
+    
+    if(avg>0 && avg<=range1){
+        outputVal=0;
+    }
+    if(avg>range1 && avg<=range2){
+        outputVal=1;
+    }
+    if(avg>range3 && avg<=121){
+        outputVal=0;
+    }  
+    
+    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1);
+
+    
+    
+    // if (Result[id.xy].x > 0) 
+    // {
+    //     Result[id.xy] = (sum == 2 || sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
+    // }
+    // else 
+    // {
+    //     Result[id.xy] = (sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
+    // }
+
+  
+    
+}
