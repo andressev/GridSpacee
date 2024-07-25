@@ -356,12 +356,16 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Automatas/Conways.cs"
 "Assets/Scripts/Automatas/MNCA.cs"
+"Assets/Scripts/Automatas/SliderBehavior.cs"
+"Assets/Scripts/AutomataUtilities.cs"
 "Assets/Scripts/ComputeHelper.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Grid/Cell.cs"
 "Assets/Scripts/Grid/ClickCell.cs"
 "Assets/Scripts/Grid/GridGenerator.cs"
+"Assets/Scripts/Grid/NeighborhoodTemplate.cs"
 "Assets/Scripts/Grid/NHMaker.cs"
-"Assets/Scripts/NxNMatrix.cs"
+"Assets/Scripts/Grid/SavedNeighboorhods.cs"
 "Assets/zExtra/Sample/ComputeCompiller.cs"
 -langversion:9.0
 

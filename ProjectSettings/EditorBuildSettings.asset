@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/NeighborhoodMaker.unity
+    guid: da680242034a0a94480f126737c3775b
   m_configObjects: {}

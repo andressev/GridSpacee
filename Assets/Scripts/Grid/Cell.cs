@@ -9,11 +9,18 @@ public class Cell : MonoBehaviour
     public bool state=false;
     public int counter; 
     private Image image;
+
+    public Sprite spriteOff;
+
+    public Sprite spriteOn;
+
+    private SpriteRenderer render;
     
 
 
     public void Start(){
         image= GetComponent<Image>();
+        
     }
 
     public void SetCoordinates(int x, int y, int counter){
@@ -25,11 +32,12 @@ public class Cell : MonoBehaviour
     
 
     public void changeState(){
+        
 
         if(this.state){
-            image.color=new Color(0.33f,.33f,0.33f,1);
+            image.sprite=spriteOn;
         }else{
-            image.color=new Color(0.8f,.8f,0.8f,1);
+            image.sprite=spriteOn;
 
         }
         state=!state;

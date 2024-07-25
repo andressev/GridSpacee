@@ -1,6 +1,6 @@
 // Each #kernel tells which function to compile; you can have many kernels
 #pragma kernel CSInit
-#pragma kernel CSMNCA
+#pragma kernel Customizable 
 #pragma kernel CSUpdateConway
 #pragma kernel CSBugs
 
@@ -17,15 +17,39 @@ int width;
 //Neighborhood offsets
 StructuredBuffer<uint2> CircleBuffer;
 StructuredBuffer<uint2> SquareBuffer;
-int offsetSize;
+
+
+StructuredBuffer<uint2> NeighborhoodBuffer1;
+StructuredBuffer<uint2> NeighborhoodBuffer2;
+
+int NeighborhoodBuffer1Size;
+int NeighborhoodBuffer2Size;
+
 
 
 //Rule ranges
-float range1; 
-float range2; 
-float range3;
+float slider0;
+float slider1; 
+float slider2;
+float slider3;
+float slider4;
+float slider5;
+float slider6;
+float slider7;
+float slider8;
+float slider9;
+float slider10;
+float slider11;
 
-//Struct
+
+
+//Mouse interactions
+float mousePosX;
+float mousePosY;
+bool clickedLeft;
+bool clickedRight;
+
+
 
 
 //RANDOM float generator 0-1
@@ -39,55 +63,95 @@ float rand(uint3 id)
 
 //Set noise
 [numthreads(8,8,1)] 
-void CSInit (uint3 id : SV_DispatchThreadID) //id is a uint3 becasue it refers to the specific thread that is being run, accomodate in a tenser per say?
-{
+void CSInit (uint3 id : SV_DispatchThreadID) {//id is a uint3 becasue it refers to the specific thread that is being run, accomodate in a tenser per say?
+
     
-
-    bool spawn= (rand(id)>0.5); //control density of noise
-
-
+    
+    bool spawn= (Result[id.xy].x>0.5); //control density of noise
+    
+    
     Result[id.xy] = spawn ? float4(1.0,1.0,1.0,1.0) : float4(0.0, 0.0,0.0,1.0); 
     //Result is a pixel RGBA where the adress can be accesed as a matrix and we 
 }
 
 [numthreads(8,8,1)]
-void CSMNCA (uint3 id : SV_DispatchThreadID)
-{
+
+void Customizable (uint3 id : SV_DispatchThreadID){
+
+    float avg[2]={0,0};
     
-    int avg= 0; 
-    
-    for(int i=0; i<offsetSize; i++){
-        if(Result[id.xy+CircleBuffer[i]].x>0){
-            avg++;
+
+    for(int i=0; i<NeighborhoodBuffer1Size; i++){
+        if(Result[id.xy+NeighborhoodBuffer1[i]].x>0){
+            avg[0]++;
             
         } 
     }
-    
-    avg= avg/offsetSize;
-    
-    
-    int outputVal= Result[id.xy].x; //STARTS w our value on red
-    
-    if(avg>0 && avg<=range1){
+    for(int j=0; j<NeighborhoodBuffer2Size; j++){
+        if(Result[id.xy+NeighborhoodBuffer2[j]].x>0){
+            avg[1]++;
+            
+        } 
+    }
+    avg[0]=avg[0]/NeighborhoodBuffer1Size;
+    avg[1]=avg[1]/NeighborhoodBuffer2Size;
+
+    int outputVal= Result[id.xy].x;
+
+
+    if(    avg[0]>=slider0 
+        && avg[0]<=slider1){
+
+        outputVal=1;
+    }
+    if(    avg[0]>=slider2
+        && avg[0]<=slider3){
+
         outputVal=0;
     }
-    if(avg>range1 && avg<=range2){
+    if(    avg[0]>=slider4 
+        && avg[0]<=slider5){
+        outputVal=0;
+    }  
+
+    //Second Neighborhood pass
+
+    if(    avg[1]>=slider6 
+        && avg[1]<=slider7){
+
         outputVal=0;
     }
-    if(avg>range2 && avg<=range3){
+    if(    avg[1]>=slider8
+        && avg[1]<=slider9){
+
+        outputVal=1;
+    }
+    if(    avg[1]>=slider10 
+        && avg[1]<=slider11){
+        outputVal=0;
+    }  
+
+    
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy)<19);
+
+    if(clickedLeft && inRadius){
+
+        outputVal=0;
+    }
+    if(clickedRight && inRadius){
+
         outputVal=1;
     }
     
 
-    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1.);
-    if(avg>10){
-        Result[id.xy]=float4(1,0,1, 1.);
-    }
+    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1);
+
+
+
 }
 
 [numthreads(8,8,1)]
-void CSUpdateConway (uint3 id : SV_DispatchThreadID)
-{
+void CSUpdateConway (uint3 id : SV_DispatchThreadID){
    
 
 
@@ -117,8 +181,7 @@ void CSUpdateConway (uint3 id : SV_DispatchThreadID)
 
 
 [numthreads(8,8,1)]
-void CSBugs (uint3 id : SV_DispatchThreadID)
-{
+void CSBugs (uint3 id : SV_DispatchThreadID){
    
     int avg=0;
     for(int i=0; i<121; i++){
@@ -133,13 +196,13 @@ void CSBugs (uint3 id : SV_DispatchThreadID)
     
     int outputVal= Result[id.xy].x; //STARTS w our value on red
     
-    if(avg>0 && avg<=range1){
+    if(avg>0 && avg<=slider0){
         outputVal=0;
     }
-    if(avg>range1 && avg<=range2){
+    if(avg>slider0 && avg<=slider1){
         outputVal=1;
     }
-    if(avg>range3 && avg<=121){
+    if(avg>slider2 && avg<=121){
         outputVal=0;
     }  
     

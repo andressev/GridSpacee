@@ -8,6 +8,10 @@
     using UnityEngine.AI;
     using UnityEngine.Experimental.Rendering;
 
+
+	
+
+
 	public static class ComputeHelper
 	{
 
@@ -361,6 +365,8 @@
 
 			return offsets;
     	}
+		
+
 		
 
 		

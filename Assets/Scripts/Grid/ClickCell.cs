@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -20,19 +21,27 @@ public class ClickCell : MonoBehaviour
         
 
     }
+    double Norm(Vector2Int vec){
+
+        double x= (double) vec.x;
+        double y= (double) vec.y;
+
+        return Math.Sqrt(x*x+y*y);
+    }
     public void OnImageClick()
     {
         
         if (grid != null && cell != null)
         {
             grid.AddSymetrically(cell);
-            Debug.Log("Button clicked and AddSymetrically called.");
+            Debug.Log($"Distance to center : {Norm(cell.coord)}");
+            // Debug.Log("Button clicked and AddSymetrically called.");
         }
         else
         {
             Debug.LogError("Grid or cell reference is missing.");
         }
               
-        Debug.Log("working button");
+        // Debug.Log("working button");
     } 
 }
