@@ -2,7 +2,7 @@ This is a repository for a unity project to explore the parameter space of discr
 
 
 
-##What is an automata?
+## What is an automata?
 
 Take a grid of pixels, imagine that for each of those pixels you can run a function at the same time as all other pixels. Now John Conway thought, I will ask each pixel/cell how many of its neighbors that are directly next to it are alive (turned on), if the cell is alive and has 2-3 alive neighbors it will live, if its dead and has exactly 3 live neighbors it will come back to life.
 
@@ -15,6 +15,6 @@ This little system is the famous Conway's game of life. As impressive as it is, 
 
 
 
-##What is GridSpace?
+## What is GridSpace?
 
 This gamified tool is a way to explore the parameter space of cellular automata, inspired heavily by Slackermanz who discoverd and implemented the multiple neighborhood cellular automata (MNCA) variation and has been exploring it for the past decade. With Slackermanz help and insight I built GridSpace, where you can create neighborhoods and add them to the automata, to explore the neighborhoods and their rules a mutation system will be implemented where you can start from a random state and from 8 options go into the next generation. 
