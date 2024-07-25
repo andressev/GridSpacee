@@ -17,4 +17,5 @@ This little system is the famous Conway's game of life. As impressive as it is, 
 
 ## What is GridSpace?
 
-This gamified tool is a way to explore the parameter space of cellular automata, inspired heavily by Slackermanz who discoverd and implemented the multiple neighborhood cellular automata (MNCA) variation and has been exploring it for the past decade. With Slackermanz help and insight I built GridSpace, where you can create neighborhoods and add them to the automata, to explore the neighborhoods and their rules a mutation system will be implemented where you can start from a random state and from 8 options go into the next generation. 
+This gamified tool is a way to explore the parameter space of cellular automata, inspired heavily by Slackermanz who discoverd and implemented the multiple neighborhood cellular automata (MNCA) variation and has been exploring it for the past decade. With Slackermanz help and insight I built GridSpace, where you can create neighborhoods and add them to the automata, to explore the neighborhoods and their rules. 
+A mutation system will be implemented *soon* where you can start from a random state and from 8 options go into the next generation. 
