@@ -6,7 +6,8 @@ This is a repository for a unity project to explore the parameter space of discr
 
 Take a grid of pixels, imagine that for each of those pixels you can run a function at the same time as all other pixels. Now John Conway thought, I will ask each pixel/cell how many of its neighbors that are directly next to it are alive (turned on), if the cell is alive and has 2-3 alive neighbors it will live, if its dead and has exactly 3 live neighbors it will come back to life.
 
- -Conway's Nieghborhood
+Conway's Nieghborhood:
+
 ![Conway](/mdIMages/ConwayNH.png)
 
 
