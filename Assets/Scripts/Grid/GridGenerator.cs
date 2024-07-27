@@ -142,8 +142,35 @@ public class GridGenerator : MonoBehaviour
 
         radius= (norm - Math.Floor(norm)>0.5) ? (int)norm+1 : (int)norm;
 
+        List<Vector2Int> coordinatesOfRing= new List<Vector2Int>();
+      
 
-        List<Cell> ringOfCells= new List<Cell>();
+        
+
+        Vector2Int coordinates= new Vector2Int(radius, 0);
+        int auxPoint= radius -1;
+
+
+        while(coordinates.x>=0 && coordinates.y<=radius){
+            coordinatesOfRing.Add(coordinates);
+
+
+            coordinates.y++;
+
+            if(AutomataHelper.Norm(new Vector2Int(auxPoint, coordinates.y))>radius){
+                coordinates.x--;
+                auxPoint--;
+            }
+
+            coordinatesOfRing.Add(coordinates);
+        }
+
+        foreach(Vector2Int coord in coordinatesOfRing){
+            toggleCell(getCellGameObject(coord));
+            toggleCell(getCellGameObject(new Vector2Int(-coord.x, coord.y)));
+            toggleCell(getCellGameObject(new Vector2Int(coord.x, -coord.y)));
+            toggleCell(getCellGameObject(new Vector2Int(-coord.x, -coord.y)));
+        }
 
 
         

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using ComputeShaderUtility;
 using UnityEngine;
 using AutomataUtilities;
 
@@ -50,35 +49,17 @@ public class MNCA : MonoBehaviour
         int kernel= compute.FindKernel("CSInit");
 
 
-        //TEXTURE
+        //TEXTURE uses inputed noise
         result = AutomataHelper.PictureToRenderTexture(noise); //width height and bits per pixel
-        // result.enableRandomWrite= true; //Possible to edit the texture on runtime?
-        // result.filterMode = FilterMode.Point; //SO it doesnt interpolate pixels
-        //result.Create(); //Creates the render texure lol
-    
-
-        
         
         compute.SetTexture(kernel, "Result", result); //Variable result in compute is assigned. Is this how we can pass buffers?
         compute.SetTexture(3, "Result", result);
         compute.SetTexture(1, "Result", result); //Variable result in compute is assigned. Is this how we can pass buffers?
 
 
-        render.material.SetTexture("_MainTex", result); //Aqui ponemos como la textura del quad nuestro output del shader.
+        render.material.SetTexture("_MainTex", result); //Simulation GameObject texture as place to render shader
 
 
-      
-
-        //SQUARE BUFFER 
-        Vector2Int[] squareOffsets = ComputeHelper.GenerateGrid(5);
-        ComputeHelper.Release(squareBuffer);
-        squareBuffer = new ComputeBuffer(squareOffsets.Length, sizeof(int)*2);
-        squareBuffer.SetData(squareOffsets);
-
-
-        compute.SetBuffer(3, "SquareBuffer", squareBuffer);
-
-      
         compute.Dispatch(kernel, width/8, height/8, 1); //Sends the threads to be processed on the compute shader
 
         
@@ -164,16 +145,7 @@ public class MNCA : MonoBehaviour
 
     }
 
-    public void SetSliders(){
-        List<float> sliderValues=sliderManager.GetComponent<SliderBehavior>().sliderValues;
-
-
-        for(int i=0; i<sliderValues.Count; i++){
-            compute.SetFloat($"slider{i}", sliderValues[i]);
-        }
-
-        Debug.Log(sliderValues[0]);
-    }
+    
 
     
 
