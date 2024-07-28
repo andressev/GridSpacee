@@ -140,38 +140,60 @@ public class GridGenerator : MonoBehaviour
 
         double norm= AutomataHelper.Norm(cell.coord);
 
-        radius= (norm - Math.Floor(norm)>0.5) ? (int)norm+1 : (int)norm;
+        int ringRadius= (norm - Math.Floor(norm)>0.5) ? (int)norm+1 : (int)norm;
 
-        List<Vector2Int> coordinatesOfRing= new List<Vector2Int>();
-      
 
+        Vector2Int coordinates= new Vector2Int(ringRadius, 0);
+        
+        
+        //If radius is cero because of flag in toggle will only toggle once.
+        toggleCell(getCellGameObject(new Vector2Int(ringRadius, 0)));
+        toggleCell(getCellGameObject(new Vector2Int(-ringRadius, 0)));
+        toggleCell(getCellGameObject(new Vector2Int(0, ringRadius)));
+        toggleCell(getCellGameObject(new Vector2Int(0, -ringRadius)));
+            
         
 
-        Vector2Int coordinates= new Vector2Int(radius, 0);
-        int auxPoint= radius -1;
 
 
-        while(coordinates.x>=0 && coordinates.y<=radius){
-            coordinatesOfRing.Add(coordinates);
 
+       
+        int auxPoint= 1-ringRadius;
+        while(coordinates.x>coordinates.y){
 
+        
             coordinates.y++;
 
-            if(AutomataHelper.Norm(new Vector2Int(auxPoint, coordinates.y))>radius){
+            
+            //mid point inside or on the perimeter
+            if(auxPoint<=0){
+                auxPoint= auxPoint + 2*coordinates.y +1;   
+            }
+            else{
                 coordinates.x--;
-                auxPoint--;
+                auxPoint= auxPoint + 2*coordinates.y-2*coordinates.x+1;
             }
 
-            coordinatesOfRing.Add(coordinates);
+            if(coordinates.x<coordinates.y){
+                return;
+            }
+            
+            Debug.Log("eat some pussy");
+            toggleCell(getCellGameObject(coordinates));
+            toggleCell(getCellGameObject(new Vector2Int(-coordinates.x, coordinates.y)));
+            toggleCell(getCellGameObject(new Vector2Int(coordinates.x, -coordinates.y)));
+            toggleCell(getCellGameObject(new Vector2Int(-coordinates.x, -coordinates.y)));
+
+
+            if(x!=y){
+                toggleCell(getCellGameObject(new Vector2Int(coordinates.y, coordinates.x)));
+                toggleCell(getCellGameObject(new Vector2Int(-coordinates.y, coordinates.x)));
+                toggleCell(getCellGameObject(new Vector2Int(coordinates.y, -coordinates.x)));
+                toggleCell(getCellGameObject(new Vector2Int(-coordinates.y, -coordinates.x)));
+            }
         }
 
-        foreach(Vector2Int coord in coordinatesOfRing){
-            toggleCell(getCellGameObject(coord));
-            toggleCell(getCellGameObject(new Vector2Int(-coord.x, coord.y)));
-            toggleCell(getCellGameObject(new Vector2Int(coord.x, -coord.y)));
-            toggleCell(getCellGameObject(new Vector2Int(-coord.x, -coord.y)));
-        }
-
+        
 
         
 

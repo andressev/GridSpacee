@@ -16,7 +16,7 @@ public class NeighborhoodTemplate : MonoBehaviour
 
         
         //Pulls data, instantiates the sets data
-        if(pickedNeighborhoods.childCount<2){
+        if(pickedNeighborhoods.childCount<4){
 
             Neighborhood nh= GetComponent<NeighborhoodTemplate>().nh;
             var copyNeighborhood= Instantiate(gameObject, pickedNeighborhoods);

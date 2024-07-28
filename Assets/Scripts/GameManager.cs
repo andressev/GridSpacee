@@ -181,25 +181,23 @@ public class GameManager : MonoBehaviour
     public void ApplyNeighborhoods(){
         MNCA mnca= simulation.GetComponent<MNCA>();
 
-        Transform childNeighborhood1= pickedNeighborhoods.GetChild(0);
-        NeighborhoodTemplate infoTemplate1 =childNeighborhood1.GetComponent<NeighborhoodTemplate>();
-        if(infoTemplate1.nh.coordinates==null){
+        List<List<Vector2Int>> neighborhoodCoordinates= new List<List<Vector2Int>>();
 
-            Debug.Log("The info is null BITCH: ");
+        foreach(Transform child in pickedNeighborhoods.transform){
+            NeighborhoodTemplate infoTemplate =child.GetComponent<NeighborhoodTemplate>();
+      
+            List<Vector2Int> neighborhood= infoTemplate.nh.coordinates;
+
+            neighborhoodCoordinates.Add(neighborhood);
+
         }
-        List<Vector2Int> neighborhood1= infoTemplate1.nh.coordinates;
 
-
-        Transform childNeighborhood2= pickedNeighborhoods.GetChild(1);
-        NeighborhoodTemplate infoTemplate2 =childNeighborhood2.GetComponent<NeighborhoodTemplate>();
 
         
-        List<Vector2Int> neighborhood2= infoTemplate2.nh.coordinates;
-        Debug.Log("we have "+neighborhood2.Count+" coordinates");
         
         
         //Setting the mnca buufers
-        mnca.SetNeighborhoodBuffers(neighborhood1, neighborhood2);
+        mnca.SetNeighborhoodBuffers(neighborhoodCoordinates);
         mnca.Start();
 
 

@@ -53,8 +53,11 @@ public class MNCA : MonoBehaviour
         result = AutomataHelper.PictureToRenderTexture(noise); //width height and bits per pixel
         
         compute.SetTexture(kernel, "Result", result); //Variable result in compute is assigned. Is this how we can pass buffers?
-        compute.SetTexture(3, "Result", result);
+
         compute.SetTexture(1, "Result", result); //Variable result in compute is assigned. Is this how we can pass buffers?
+
+        compute.SetTexture(2, "Result", result);
+
 
 
         render.material.SetTexture("_MainTex", result); //Simulation GameObject texture as place to render shader
@@ -67,6 +70,7 @@ public class MNCA : MonoBehaviour
 
     
     public float slider0, slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11;
+    public int slider12;
 
     public GameObject sliderManager;
 
@@ -89,16 +93,22 @@ public class MNCA : MonoBehaviour
         compute.SetFloat("slider9", slider9/100);
         compute.SetFloat("slider10", slider10/100);
         compute.SetFloat("slider11", slider11/100);
-        
+        compute.SetInt("slider12", slider12);
 
         
-
         
+        float mouSex=Input.mousePosition.x*((float)noise.width/Screen.width);
+        float mouSey= Input.mousePosition.y*(((float)noise.height)/Screen.height);
 
         //Setting Mouse Pos
-        compute.SetFloat("mousePosX", Input.mousePosition.x*((float)width/Screen.width)%width);
-        compute.SetFloat("mousePosY", Input.mousePosition.y*((float)height/Screen.height)%height);
+        compute.SetFloat("mousePosX", mouSex);
+        compute.SetFloat("mousePosY", mouSey);
         compute.SetBool("clickedLeft", Input.GetMouseButton(0));
+
+
+        if(Input.GetMouseButton(0)){
+            Debug.Log($"{mouSex}, {mouSey}");
+        }
         compute.SetBool("clickedRight", Input.GetMouseButton(1));
         
         
@@ -111,39 +121,36 @@ public class MNCA : MonoBehaviour
 
 
     }
-    public void SetNeighborhoodBuffers(List<Vector2Int> neighborhood1, List<Vector2Int> neighborhood2){
+    public void SetNeighborhoodBuffers(List<List<Vector2Int>> neighborhoodCoordinates){
         
-        Vector2Int[] nh1= neighborhood1.ToArray();
-        Vector2Int[] nh2= neighborhood2.ToArray();
+        
 
-        int kernelCustomizable= compute.FindKernel("Customizable");
+        int kernelCustomizable= compute.FindKernel("TwoNeighborhoods");
 
         Debug.Log("kernel is"+kernelCustomizable);
 
-        // neighborhoodBuffer1.Release();
-        // neighborhoodBuffer2.Release();
-
-        neighborhoodBuffer1= new ComputeBuffer(nh1.Length, sizeof(int)*2);
-        neighborhoodBuffer2= new ComputeBuffer(nh2.Length, sizeof(int)*2);
+        int bufferCount=1; //knows what buffer is being set up
 
         compute.SetTexture(1, "Result", result);
+
+        foreach(List<Vector2Int> neighborhood in neighborhoodCoordinates){
+            Vector2Int[] arrayNh= neighborhood.ToArray();
+            ComputeBuffer neighborhoodBuffer= new ComputeBuffer(arrayNh.Length, sizeof(int)*2);
+
+            neighborhoodBuffer.SetData(arrayNh);
+
+            compute.SetInt($"NeighborhoodBuffer{bufferCount}Size", arrayNh.Length);
+
+            compute.SetBuffer(kernelCustomizable,$"NeighborhoodBuffer{bufferCount}",neighborhoodBuffer);
+            bufferCount++;
+        }
+
         
-
-        neighborhoodBuffer1.SetData(nh1);
-        neighborhoodBuffer2.SetData(nh2);
-
-        compute.SetInt("NeighborhoodBuffer1Size", nh1.Length);
-        compute.SetInt("NeighborhoodBuffer2Size", nh2.Length);
-
-
-
-        compute.SetBuffer(kernelCustomizable,"NeighborhoodBuffer1",neighborhoodBuffer1);
-        compute.SetBuffer(kernelCustomizable,"NeighborhoodBuffer2",neighborhoodBuffer2);
-
-        Start();
         
 
     }
+   
+
 
     
 

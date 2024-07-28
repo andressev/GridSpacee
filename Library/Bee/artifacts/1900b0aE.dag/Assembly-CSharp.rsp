@@ -361,7 +361,6 @@
 "Assets/Scripts/Grid/ClickCell.cs"
 "Assets/Scripts/Grid/GridGenerator.cs"
 "Assets/Scripts/Grid/NeighborhoodTemplate.cs"
-"Assets/Scripts/Grid/NHMaker.cs"
 "Assets/Scripts/Grid/SavedNeighboorhods.cs"
 "Assets/zExtra/Sample/ComputeCompiller.cs"
 -langversion:9.0

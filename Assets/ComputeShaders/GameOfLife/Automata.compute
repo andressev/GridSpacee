@@ -1,35 +1,28 @@
-// Each #kernel tells which function to compile; you can have many kernels
 #pragma kernel CSInit
-#pragma kernel Customizable 
-#pragma kernel CSUpdateConway
-#pragma kernel CSBugs
+#pragma kernel TwoNeighborhoods
+#pragma kernel ThreeNeighborhoods
 
-
-
-// Create a RenderTexture with enableRandomWrite flag and set it
-// with cs.SetTexture
 RWTexture2D<float4> Result;
 
-//Screen variables defined in csharp script
-int height;
-int width; 
-
-//Neighborhood offsets
-StructuredBuffer<uint2> CircleBuffer;
-StructuredBuffer<uint2> SquareBuffer;
-
+// Screen variables defined in C# script
+uint height;
+uint width;
 
 StructuredBuffer<uint2> NeighborhoodBuffer1;
 StructuredBuffer<uint2> NeighborhoodBuffer2;
+StructuredBuffer<uint2> NeighborhoodBuffer3;
+StructuredBuffer<uint2> NeighborhoodBuffer4;
+StructuredBuffer<uint2> NeighborhoodBuffer5;
 
-int NeighborhoodBuffer1Size;
-int NeighborhoodBuffer2Size;
+uint NeighborhoodBuffer1Size;
+uint NeighborhoodBuffer2Size;
+uint NeighborhoodBuffer3Size;
+uint NeighborhoodBuffer4Size;
+uint NeighborhoodBuffer5Size;
 
-
-
-//Rule ranges
+// Rule ranges
 float slider0;
-float slider1; 
+float slider1;
 float slider2;
 float slider3;
 float slider4;
@@ -40,185 +33,137 @@ float slider8;
 float slider9;
 float slider10;
 float slider11;
+int slider12;
 
-
-
-//Mouse interactions
+// Mouse interactions
 float mousePosX;
 float mousePosY;
 bool clickedLeft;
 bool clickedRight;
 
-
-
-
-//RANDOM float generator 0-1
-float rand(uint3 id)
-{
-    uint2 uv= id.xy;
-    float2 noise = (frac(sin(dot(uv ,float2(12.9898,78.233)*2.0)) * 43758.5453));
+// RANDOM float generator 0-1
+float rand(uint3 id) {
+    uint2 uv = id.xy;
+    float2 noise = frac(sin(dot(uv, float2(12.9898, 78.233) * 2.0)) * 43758.5453);
     return abs(noise.x + noise.y) * 0.5;
 }
 
-
-//Set noise
-[numthreads(8,8,1)] 
-void CSInit (uint3 id : SV_DispatchThreadID) {//id is a uint3 becasue it refers to the specific thread that is being run, accomodate in a tenser per say?
-
-    
-    
-    bool spawn= (Result[id.xy].x>0.5); //control density of noise
-    
-    
-    Result[id.xy] = spawn ? float4(1.0,1.0,1.0,1.0) : float4(0.0, 0.0,0.0,1.0); 
-    //Result is a pixel RGBA where the adress can be accesed as a matrix and we 
+// Set noise
+[numthreads(8,8,1)]
+void CSInit(uint3 id : SV_DispatchThreadID) {
+    bool spawn = (Result[id.xy].x > 0.5);
+    Result[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
 }
 
 [numthreads(8,8,1)]
+void TwoNeighborhoods(uint3 id : SV_DispatchThreadID) {
+    float avg[2] = {0, 0};
 
-void Customizable (uint3 id : SV_DispatchThreadID){
-
-    float avg[2]={0,0};
-    
-
-    for(int i=0; i<NeighborhoodBuffer1Size; i++){
-        if(Result[id.xy+NeighborhoodBuffer1[i]].x>0){
+    for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
+        if (Result[id.xy + NeighborhoodBuffer1[i]].x > 0) {
             avg[0]++;
-            
-        } 
-    }
-    for(int j=0; j<NeighborhoodBuffer2Size; j++){
-        if(Result[id.xy+NeighborhoodBuffer2[j]].x>0){
-            avg[1]++;
-            
-        } 
-    }
-    avg[0]=avg[0]/NeighborhoodBuffer1Size;
-    avg[1]=avg[1]/NeighborhoodBuffer2Size;
-
-    int outputVal= Result[id.xy].x;
-
-
-    if(    avg[0]>=slider0 
-        && avg[0]<=slider1){
-
-        outputVal=1;
-    }
-    if(    avg[0]>=slider2
-        && avg[0]<=slider3){
-
-        outputVal=0;
-    }
-    if(    avg[0]>=slider4 
-        && avg[0]<=slider5){
-        outputVal=0;
-    }  
-
-    //Second Neighborhood pass
-
-    if(    avg[1]>=slider6 
-        && avg[1]<=slider7){
-
-        outputVal=0;
-    }
-    if(    avg[1]>=slider8
-        && avg[1]<=slider9){
-
-        outputVal=1;
-    }
-    if(    avg[1]>=slider10 
-        && avg[1]<=slider11){
-        outputVal=0;
-    }  
-
-    
-    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy)<19);
-
-    if(clickedLeft && inRadius){
-
-        outputVal=0;
-    }
-    if(clickedRight && inRadius){
-
-        outputVal=1;
-    }
-    
-
-    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1);
-
-
-
-}
-
-[numthreads(8,8,1)]
-void CSUpdateConway (uint3 id : SV_DispatchThreadID){
-   
-
-
-    int sum = 0;
-
-    //Offset loop continues when no offset.
-    for (int x = -1; x <= 1; x++) {
-        for (int y = -1; y <= 1; y++) {
-            if (x == 0 && y == 0) continue;            
-            if (Result[id.xy + uint2(x,y)].x > 0) sum++; //we check the textue on the position plus offset to see if alive
         }
     }
-    
-    
-    if (Result[id.xy].x > 0) 
-    {
-        Result[id.xy] = (sum == 2 || sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
+    for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
+        if (Result[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+            avg[1]++;
+        }
     }
-    else 
-    {
-        Result[id.xy] = (sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
+    avg[0] = avg[0] / NeighborhoodBuffer1Size;
+    avg[1] = avg[1] / NeighborhoodBuffer2Size;
+
+    uint outputVal = Result[id.xy].x;
+
+    if (avg[0] >= slider0 && avg[0] <= slider1) {
+        outputVal = 1;
+    }
+    if (avg[0] >= slider2 && avg[0] <= slider3) {
+        outputVal = 0;
+    }
+    if (avg[0] >= slider4 && avg[0] <= slider5) {
+        outputVal = 0;
     }
 
-  
-    
+    // Second Neighborhood pass
+    if (avg[1] >= slider6 && avg[1] <= slider7) {
+        outputVal = 0;
+    }
+    if (avg[1] >= slider8 && avg[1] <= slider9) {
+        outputVal = 1;
+    }
+    if (avg[1] >= slider10 && avg[1] <= slider11) {
+        outputVal = 0;
+    }
+
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy) < 19);
+
+    if (clickedLeft && inRadius) {
+        outputVal = 0;
+    }
+    if (clickedRight && inRadius) {
+        outputVal = 1;
+    }
+
+
+    if(Result[id.xy].r==1){
+        Result[id.xy] = float4(outputVal, outputVal, 0, 1);
+    }else if(Result[id.xy].r==0 && outputVal==1){
+        Result[id.xy] = float4(outputVal, 0.0, 0.5, 1);
+    }else{
+        Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
+    }
+
+    if(id.y>slider12){
+        Result[id.xy] = float4(1, 1, 1, 1);
+    }
 }
 
-
 [numthreads(8,8,1)]
-void CSBugs (uint3 id : SV_DispatchThreadID){
-   
-    int avg=0;
-    for(int i=0; i<121; i++){
-        if(Result[id.xy+SquareBuffer[i]].x>0){
-            avg++;
-            
-        } 
+void ThreeNeighborhoods(uint3 id : SV_DispatchThreadID) {
+    float avg[3] = {0, 0, 0};
+
+    // Get and set average values for each neighborhood
+    for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
+        if (Result[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+            avg[0]++;
+        }
+    }
+    for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
+        if (Result[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+            avg[1]++;
+        }
+    }
+    for (uint h = 0; h < NeighborhoodBuffer3Size; h++) {
+        if (Result[id.xy + NeighborhoodBuffer3[h]].x > 0) {
+            avg[2]++;
+        }
+    }
+    avg[0] = avg[0] / NeighborhoodBuffer1Size;
+    avg[1] = avg[1] / NeighborhoodBuffer2Size;
+    avg[2] = avg[2] / NeighborhoodBuffer3Size;
+
+    uint outputVal = Result[id.xy].x;
+
+    uint thresholds[24];
+    uint outputValArray[12];
+
+    // For compactness a loop that has four conditions per neighborhood avg, uses 24 thresholds (2 thresholds * 4 conditions * 3 neighborhoods = 24)
+    for (uint condition = 0; condition < 24; condition += 2) {
+        if (avg[condition / 8] >= thresholds[condition] &&
+            avg[condition / 8] <= thresholds[condition + 1]) {
+            outputVal = outputValArray[condition / 2];
+        }
     }
 
-    
+    // Mouse logic to kill/birth in a radius
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy) < 19);
 
-    
-    int outputVal= Result[id.xy].x; //STARTS w our value on red
-    
-    if(avg>0 && avg<=slider0){
-        outputVal=0;
+    if (clickedLeft && inRadius) {
+        outputVal = 0;
     }
-    if(avg>slider0 && avg<=slider1){
-        outputVal=1;
+    if (clickedRight && inRadius) {
+        outputVal = 1;
     }
-    if(avg>slider2 && avg<=121){
-        outputVal=0;
-    }  
-    
-    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1);
 
-    
-    
-    // if (Result[id.xy].x > 0) 
-    // {
-    //     Result[id.xy] = (sum == 2 || sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
-    // }
-    // else 
-    // {
-    //     Result[id.xy] = (sum == 3) ? float4(1,1,1,1) : float4(0,0,0,1);
-    // }
-
-  
-    
+    Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
 }

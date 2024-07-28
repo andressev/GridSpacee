@@ -2,6 +2,7 @@ namespace AutomataUtilities{
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    
     // using ComputeShaderUtility;
     using UnityEngine;
     
@@ -33,6 +34,7 @@ namespace AutomataUtilities{
 
     };
 
+	
 
 	public static class AutomataHelper{
 
@@ -97,6 +99,16 @@ namespace AutomataUtilities{
         	double y= (double) vec.y;
 
         	return Math.Sqrt(x*x+y*y);
+		}
+
+		public static double Norm(Vector2 vec){
+			double x= (double) vec.x;
+        	double y= (double) vec.y;
+
+
+        	return Math.Sqrt(x*x+y*y);
+
+			
 		}
 	} 
 	

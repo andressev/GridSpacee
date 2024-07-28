@@ -72,7 +72,6 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Grid\Cell.cs" />
     <Compile Include="Assets\zExtra\Sample\ComputeCompiller.cs" />
-    <Compile Include="Assets\Scripts\Grid\NHMaker.cs" />
     <Compile Include="Assets\Scripts\Grid\GridGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
