@@ -34,7 +34,42 @@ namespace AutomataUtilities{
 
     };
 
-	
+	public class ComputeBufferManager : MonoBehaviour{
+		private static List<ComputeBuffer> buffers = new List<ComputeBuffer>();
+
+		public static ComputeBuffer CreateBuffer(int count, int stride)
+		{
+			ComputeBuffer buffer = new ComputeBuffer(count, stride);
+			buffers.Add(buffer);
+			return buffer;
+		}
+
+		public static void DisposeBuffer(ComputeBuffer buffer)
+		{
+			if (buffer != null)
+			{
+				buffer.Dispose();
+				buffers.Remove(buffer);
+			}
+		}
+
+		void OnApplicationQuit()
+		{
+			DisposeAllBuffers();
+		}
+
+		public static void DisposeAllBuffers()
+		{
+			foreach (var buffer in buffers)
+			{
+				if (buffer != null)
+				{
+					buffer.Dispose();
+				}
+			}
+			buffers.Clear();
+		}
+	}
 
 	public static class AutomataHelper{
 
@@ -77,7 +112,6 @@ namespace AutomataUtilities{
 		public static RenderTexture PictureToRenderTexture(Texture2D tex){
 
 			RenderTexture renderTexture = new RenderTexture(tex.width, tex.height, 24);
-			Debug.Log(tex.width+",  "+ tex.height);
 			renderTexture.enableRandomWrite=true;
 			renderTexture.filterMode=FilterMode.Point;
 			renderTexture.Create();

@@ -191,11 +191,6 @@ public class GameManager : MonoBehaviour
             neighborhoodCoordinates.Add(neighborhood);
 
         }
-
-
-        
-        
-        
         //Setting the mnca buufers
         mnca.SetNeighborhoodBuffers(neighborhoodCoordinates);
         mnca.Start();
