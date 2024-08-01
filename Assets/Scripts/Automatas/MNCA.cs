@@ -4,44 +4,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using AutomataUtilities;
 using Unity.VisualScripting;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Rendering;
+using System.Dynamic;
 
 
 
 public class MNCA : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int width = 512;
-    public int height = 512;
-
+   
 
     
     public ComputeShader compute;
-    public RenderTexture result;
+
+    
+    
+    private bool usePingBuffer = true;
     public Texture2D noise;
 
      //render texture that is applied to material
 
     public Renderer render;
 
-   
-
-    //Costumizable buffers
-    public ComputeBuffer neighborhoodBuffer1;
-    public ComputeBuffer neighborhoodBuffer2;
-
-
-    //0 is init, 1 costumizable, 2,3,4... costum settings for cool stuff
     [Range(0,3)]public int kernelToggle=2;
     
 
     private int[][] randomDataStorage;
+    private Vector2Int[][] ringMatrix;
 
 
+
+
+    //Pingpong necessary variables
+    public RenderTexture pingBuffer;
+    public RenderTexture pongBuffer;
+    RenderTexture currentBuffer;
+    RenderTexture nextBuffer;
+
+    //Mutation strenght
+    public GameObject mutationStrengthCounter;
+    private Text mutationStrengthText;
+
+
+    //framestep and pause
+    bool frameStepMode=false;
+    bool doStep=false;
 
     
-    
-    private RenderTexture startingNoise;
 
+    //slowdown frames
+    public float updateInterval = 1.0f;
+
+    private float timer= 0.0f;
 
     public void Start()
     {
@@ -55,82 +71,137 @@ public class MNCA : MonoBehaviour
         }
 
         //TEXTURE uses inputed noise
-        result = AutomataHelper.PictureToRenderTexture(noise);; //width height and bits per pixel
+
+        pingBuffer = AutomataHelper.PictureToRenderTexture(noise); //width height and bits per pixel
+        pongBuffer = new RenderTexture(noise.width, noise.height, 24);
+        pongBuffer.enableRandomWrite=true;
+	    pongBuffer.filterMode=FilterMode.Point;
+		pongBuffer.Create();
         
-        compute.SetInt("width", result.width);
-        compute.SetInt("height", result.height);
-
-
-        compute.SetTexture(kernel, "Result", result); //Variable result in compute is assigned. Is this how we can pass buffers?
-
-        compute.SetTexture(1, "Result", result); //Variable result in compute is assigned. Is this how we can pass buffers?
         
-        compute.SetTexture(2, "Result", result);
+        compute.SetInt("width", pingBuffer.width);
+        compute.SetInt("height", pingBuffer.height);
 
 
-
-        render.material.SetTexture("_MainTex", result); //Simulation GameObject texture as place to render shader
-
-
-        compute.Dispatch(kernel, width/8, height/8, 1); //Sends the threads to be processed on the compute shader
 
         SendRandomData(23,0);
         SendRandomData(23,1);
         SendRandomData(23,2);
         SendRandomData(23,3);
+
+       
+        
+        mutationStrengthText= mutationStrengthCounter.GetComponent<Text>();
+        mutationStrengthText.text=$"{(int)mutationStrength}";
+
+        
+
+        //Sends the preset neighborhood offsets
+        Vector2Int[] flatRingMatrix=AutomataHelper.GetFlatRingMatrix();
+
+        ComputeBuffer neighborhoodPreCalc= ComputeBufferManager.CreateBuffer(93*17,sizeof(int)*2);
+        neighborhoodPreCalc.SetData(flatRingMatrix);
+        compute.SetBuffer(1,"NeighborhoodPreCalc", neighborhoodPreCalc);
+        compute.SetBuffer(2,"NeighborhoodPreCalc", neighborhoodPreCalc);
+        compute.SetBuffer(3,"NeighborhoodPreCalc", neighborhoodPreCalc);
+        
+
+        Debug.Log(131&1);
+
+
     }
-
-    
-    
-
-
-
-    // Update is called once per frame
-
 
     private int threadRegion;
     void Update()
     {
-        
-        
-        float mouSex=Input.mousePosition.x*((float)noise.width/Screen.width);
-        float mouSey= Input.mousePosition.y*(((float)noise.height)/Screen.height);
+    // Calculate mouse position in texture space
+        float mouSex = Input.mousePosition.x * ((float)noise.width / Screen.width);
+        float mouSey = Input.mousePosition.y * ((float)noise.height / Screen.height);
 
-        //Setting Mouse Pos
+        // Setting Mouse Position
         compute.SetFloat("mousePosX", mouSex);
         compute.SetFloat("mousePosY", mouSey);
         compute.SetBool("clickedLeft", Input.GetMouseButton(0));
-
-
-        
         compute.SetBool("clickedRight", Input.GetMouseButton(1));
+
         
         
-        compute.SetTexture(kernelToggle, "Result", result);
+
+        //HANDLES DATA -----------------------------------------------------------------------------------------------------------------------
         
-        compute.Dispatch(kernelToggle, width / 8, height / 8, 1);
+        // Handle random data on Tab key press
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                SendRandomData(23, i);
+            }
+        }
+        // Calculate the thread region based on mouse position
+        threadRegion = ((int)Input.mousePosition.x / (int)(Screen.width / 2)) + (2 * ((int)Input.mousePosition.y / (int)(Screen.height / 2))); 
 
-
-        render.material.SetTexture("_MainTex", result); //We can use result cause in unity whatever you initialize in start you have acces to
-
+        // Handle random data mutation on Space key press
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            MutateRandomData((int)mutationStrength, threadRegion);
+        }
+
+
+
+        //HANDLES SHADER--------------------------------------------------------------------------------------------------------------
+        if(Input.GetKeyDown(KeyCode.F)){
+            frameStepMode=!frameStepMode;
+        }
+
+        if(Input.GetKeyDown(KeyCode.G)){
+            doStep=true;
+        }
+
+
+        timer += Time.deltaTime;
+        
+
+        if (updateInterval == 0.0f || timer >= updateInterval)
+        {
+            if(!frameStepMode || doStep==true){
+                doStep=false;
+
+                currentBuffer = usePingBuffer ? pingBuffer : pongBuffer;
+                nextBuffer    = usePingBuffer ? pongBuffer : pingBuffer;
+
+                compute.SetTexture(kernelToggle, "Input", currentBuffer);
+                compute.SetTexture(kernelToggle, "Result", nextBuffer);
+
             
-            SendRandomData(23, 0);
-            SendRandomData(23, 1);
-            SendRandomData(23, 2);
-            SendRandomData(23, 3);
-           
-
+                compute.Dispatch(kernelToggle, currentBuffer.width / 8, currentBuffer.height / 8, 1);
+                
+                
+                // Swap buffers
+                usePingBuffer = !usePingBuffer;
+                timer = 0.0f;
+            }
+            
+            
         }
 
-        threadRegion=((int)Input.mousePosition.x/(int)(Screen.width/2)) + (2*((int)Input.mousePosition.y/(int)(Screen.height/2))); 
-
-        if(Input.GetKeyDown(KeyCode.Tab)){
-            MutateRandomData(mutationStrenght,threadRegion);
-        }
 
         
+        render.material.SetTexture("_MainTex", nextBuffer);
+
+
+        // Adjust mutation strength based on horizontal input
+        float horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput > 0 && mutationStrength <= 60)
+        {
+            mutationStrength += 15 * Time.deltaTime * horizontalInput;
+        }
+        else if (horizontalInput < 0 && mutationStrength >= 0)
+        {
+            mutationStrength -= 15 * Time.deltaTime * -horizontalInput;
+        }
+
+        // Update UI text
+        mutationStrengthText.text = $"{(int)mutationStrength}";
     }
     public void SetNeighborhoodBuffers(List<List<Vector2Int>> neighborhoodCoordinates){
         
@@ -142,7 +213,10 @@ public class MNCA : MonoBehaviour
 
         int bufferCount=1; //knows what buffer is being set up
 
-        compute.SetTexture(kernelToggle, "Result", result);
+        // currentBuffer = usePingBuffer ? pingBuffer : pongBuffer;
+        // compute.SetTexture(kernelToggle, "Input", currentBuffer);
+        pingBuffer=AutomataHelper.PictureToRenderTexture(noise);
+        pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
 
         foreach(List<Vector2Int> neighborhood in neighborhoodCoordinates){
             Vector2Int[] arrayNh= neighborhood.ToArray();
@@ -163,10 +237,8 @@ public class MNCA : MonoBehaviour
 
 
 
-    [Range(1,60)]public int mutationStrenght=20;
-
-
-
+    [Range(1,60)]public float mutationStrength=20;
+    
     public int[] CreateRandomData(int amountOfInt32){
         int[] randomData= new int [amountOfInt32];
 
@@ -189,17 +261,18 @@ public class MNCA : MonoBehaviour
         randomDataBuffer.SetData(randomData);
 
         compute.SetBuffer(kernelToggle, $"RandomDataBuffer{regionIndex}", randomDataBuffer);
+        
 
         randomDataStorage[regionIndex]=randomData;
 
-        result = AutomataHelper.PictureToRenderTexture(noise); //width height and bits per pixel
-        compute.SetTexture(kernelToggle, "Result", result);
 
+        pingBuffer=AutomataHelper.PictureToRenderTexture(noise);
+        pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
 
-
+       
     }
     
-    public void MutateRandomData( int mutationStrenght, int baseIndexMutation){
+    public void MutateRandomData( int mutationStrength, int baseIndexMutation){
         System.Random rng= new System.Random();
 
         for(int i=0; i<4; i++){
@@ -208,20 +281,26 @@ public class MNCA : MonoBehaviour
                 continue;
                 
             }
-            Debug.Log(i);
-            for(int pick=0; pick<8; pick++){
-                int index= rng.Next(1,12);
-                randomDataStorage[i][index]=BitFlip(randomDataStorage[baseIndexMutation][index], mutationStrenght);
-
-            }
-
-            //Mutating update values
-            if(rng.Next(1,4)==4){
-                randomDataStorage[i][17]=BitFlip(randomDataStorage[baseIndexMutation][17], mutationStrenght/2);
-            }
-
-
             
+            randomDataStorage[i]=(int[])randomDataStorage[baseIndexMutation].Clone();
+            for(int pick=0; pick<10; pick++){
+                int index= rng.Next(1,16);
+                randomDataStorage[i][index]=BitFlip(randomDataStorage[baseIndexMutation][index], mutationStrength);
+
+            }
+            if(mutationStrength>10){
+                if(rng.Next(1,4)==4){
+                    randomDataStorage[i][17]=BitFlip(randomDataStorage[baseIndexMutation][17], mutationStrength/2);
+                }
+
+            }
+            
+            
+
+
+
+
+
             ComputeBuffer randomDataBuffer= ComputeBufferManager.CreateBuffer(23, sizeof(int));
 
 
@@ -229,10 +308,17 @@ public class MNCA : MonoBehaviour
 
             compute.SetBuffer(kernelToggle, $"RandomDataBuffer{i}", randomDataBuffer);
 
+
+
+            
+
         }
-        //Mutating thresholds
-        result = AutomataHelper.PictureToRenderTexture(noise); //width height and bits per pixel
-        compute.SetTexture(kernelToggle, "Result", result);
+        
+        
+
+
+        pingBuffer=AutomataHelper.PictureToRenderTexture(noise);
+        pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
         
     }
 
@@ -242,17 +328,17 @@ public class MNCA : MonoBehaviour
 
 
     //takes a number and mutation strenght and flips a certain amount of bits depending on mutation strenght
-    public int BitFlip(int number, int mutationStrenght){
+    public int BitFlip(int number, int mutationStrength){
 
-        int mask= Make27BitMask(mutationStrenght); 
+        int mask= Make27BitMask(mutationStrength); 
 
         return number^mask;
 
     }
 
 
-    //Given a mutationStrenghtCreates a bit sequence de strenght defines the porbability of fliping each bit
-    public int Make27BitMask(int mutationStrenght){
+    //Given a mutationStrengthCreates a bit sequence de strenght defines the porbability of fliping each bit
+    public int Make27BitMask(int mutationStrength){
 
         //mutationStrength should me max 50-60 percent if 100 it will flip back and forth so actually its stronger when 50-60
 
@@ -262,15 +348,15 @@ public class MNCA : MonoBehaviour
 
 
         for(int i=1; i<=27; i++){
-            if(rng.Next(1,100)<=mutationStrenght){
-                number+=(int)Math.Pow(2,i);
+            if(rng.Next(1,100)<=mutationStrength){
+                number |= (1 << i); //or operation with the one displaced i spots to the left, so it will turn it on
             }
         }
 
         return number;
     }
 
-    public int Make16BitMask(int mutationStrenght){
+    public int Make16BitMask(int mutationStrength){
 
         //mutationStrength should me max 50-60 percent if 100 it will flip back and forth so actually its stronger when 50-60
 
@@ -280,19 +366,11 @@ public class MNCA : MonoBehaviour
 
 
         for(int i=1; i<=16; i++){
-            if(rng.Next(1,100)<=mutationStrenght){
-                number+=(int)Math.Pow(2,i);
+            if(rng.Next(1,100)<=mutationStrength){
+               number |= (1 << i);
             }
         }
 
         return number;
     }
-
-
-
-
-    
-
-    
-
 }

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using UnityEngine.Device;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
+using UnityEngine.EventSystems;
 
 
 public class GameManager : MonoBehaviour
@@ -85,6 +86,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ToggleGrid(){
+        EventSystem.current.SetSelectedGameObject(null);
         if(UI.activeSelf){
             UI.SetActive(false);
         }else{

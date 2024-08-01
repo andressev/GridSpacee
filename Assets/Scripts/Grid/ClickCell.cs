@@ -34,7 +34,7 @@ public class ClickCell : MonoBehaviour
         if (grid != null && cell != null)
         {
             grid.AddRing(cell);
-            Debug.Log($"Distance to center : {Norm(cell.coord)}");
+            
             // Debug.Log("Button clicked and AddSymetrically called.");
         }
         else

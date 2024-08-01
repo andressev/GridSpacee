@@ -34,13 +34,17 @@ namespace AutomataUtilities{
 
     };
 
+	
+
 	public class ComputeBufferManager : MonoBehaviour{
-		private static List<ComputeBuffer> buffers = new List<ComputeBuffer>();
+		public static List<ComputeBuffer> buffers = new List<ComputeBuffer>();
 
 		public static ComputeBuffer CreateBuffer(int count, int stride)
 		{
 			ComputeBuffer buffer = new ComputeBuffer(count, stride);
 			buffers.Add(buffer);
+
+			
 			return buffer;
 		}
 
@@ -68,6 +72,12 @@ namespace AutomataUtilities{
 				}
 			}
 			buffers.Clear();
+		}
+		public static void DisposeHalfOfBuffers(){
+			for(int i=0; i<20; i++){
+				DisposeBuffer(buffers[i]);
+
+			}
 		}
 	}
 
@@ -144,6 +154,104 @@ namespace AutomataUtilities{
 
 			
 		}
+		public static Vector2Int[] GenerateRingCoords(int radius, Vector2Int[] ring){
+			
+			int auxPoint= 1-radius;
+			int count=0;
+
+
+			if(radius==0){
+				ring[0]=new Vector2Int(0,0);
+				ring[1]=new Vector2Int(73,0);
+				return ring;
+			}
+			
+
+
+			Vector2Int coordinates= new Vector2Int(radius, 0);
+
+			ring[count]=coordinates;
+			count++;
+			ring[count]=new Vector2Int(-coordinates.x, 0);
+			count++;
+			ring[count]=new Vector2Int(0, coordinates.x);
+			count++;
+			ring[count]=new Vector2Int(0, -coordinates.x);
+
+
+       		while(coordinates.x>=coordinates.y){
+
+        
+				coordinates.y++;
+
+				
+				//mid point inside or on the perimeter
+				if(auxPoint<=0){
+					auxPoint= auxPoint + 2*coordinates.y +1;   
+				}
+				else{
+					coordinates.x--;
+					auxPoint= auxPoint + 2*coordinates.y-2*coordinates.x+1;
+				}
+
+				if(coordinates.x<coordinates.y){
+					ring[count]=new Vector2Int(73,0);
+					return ring;
+				}
+				
+				
+				ring[count]=coordinates;
+				count++;
+				ring[count]=new Vector2Int(-coordinates.x, coordinates.y);
+				count++;
+				ring[count]=new Vector2Int(coordinates.x, -coordinates.y);
+				count++;
+				ring[count]=new Vector2Int(-coordinates.x, -coordinates.x);
+				count++;
+
+
+				if(coordinates.x!=coordinates.y){
+					ring[count]=new Vector2Int(coordinates.y, coordinates.x);
+					count++;
+					ring[count]=new Vector2Int(-coordinates.y, coordinates.x);
+					count++;
+					ring[count]=new Vector2Int(coordinates.y, -coordinates.x);
+					count++;
+					ring[count]=new Vector2Int(-coordinates.y, -coordinates.x);
+					count++;
+				}
+        	}
+			
+			ring[count]=new Vector2Int(73,0);
+			return ring;
+		}
+		public static Vector2Int[] GetFlatRingMatrix(){
+			Vector2Int[][]ringMatrix= new Vector2Int[17][];
+
+			Vector2Int[] ringArray=new Vector2Int[93*17];
+
+			
+			for(int i=0; i<17; i++){
+				
+				ringMatrix[i]=new Vector2Int[93];
+				AutomataHelper.GenerateRingCoords(i, ringMatrix[i]);
+
+
+			}
+
+			for(int n=0;  n<17; n++){
+				for(int m=0; m<93; m++){
+					ringArray[(n*93)+m]=ringMatrix[n][m];
+					Debug.Log($"{ringMatrix[n][m]}, {n*93+m}");
+				}
+
+			}
+
+			return ringArray;
+       
+		}
+
+
 	} 
 	
 	

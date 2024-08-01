@@ -2,7 +2,9 @@
 #pragma kernel TwoNeighborhoods
 #pragma kernel ThreeNeighborhoods
 #pragma kernel FourNeighborhoods
+#pragma kernel Conway
 
+RWTexture2D<float4> Input;
 RWTexture2D<float4> Result;
 
 // Screen variables defined in C# script
@@ -11,10 +13,10 @@ uint width;
 
 
 //Neighborhoodbuffers
-StructuredBuffer<uint2> NeighborhoodBuffer1;
-StructuredBuffer<uint2> NeighborhoodBuffer2;
-StructuredBuffer<uint2> NeighborhoodBuffer3;
-StructuredBuffer<uint2> NeighborhoodBuffer4;
+StructuredBuffer<int2> NeighborhoodBuffer1;
+StructuredBuffer<int2> NeighborhoodBuffer2;
+StructuredBuffer<int2> NeighborhoodBuffer3;
+StructuredBuffer<int2> NeighborhoodBuffer4;
 
 
 uint NeighborhoodBuffer1Size;
@@ -37,6 +39,18 @@ bool clickedLeft;
 bool clickedRight;
 
 // RANDOM float generator 0-1
+
+struct Vector2IntArray{
+    int2 int2Array[93];
+
+};
+
+struct Vector2IntMatrix{
+    Vector2IntArray int2Matrix[17];
+};
+
+
+
 
 float remapRange(uint number){
     return float(number)/127.0f;
@@ -90,8 +104,17 @@ void SetOutputValueArray(inout outputValueArray valArray, StructuredBuffer<uint>
 // Set noise
 [numthreads(8,8,1)]
 void CSInit(uint3 id : SV_DispatchThreadID) {
-    bool spawn = (Result[id.xy].x > 0.5);
-    Result[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
+
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy) < 19);
+
+    int outputVal=1;
+    if (clickedLeft && inRadius) {
+        outputVal = 0;
+    }
+    if (clickedRight && inRadius) {
+        outputVal = 1;
+    }
+    Result[id.xy]=float4(outputVal, outputVal, outputVal, 1);
 }
 
 //Kernel for Two neighbrohoods
@@ -99,31 +122,31 @@ void CSInit(uint3 id : SV_DispatchThreadID) {
 void TwoNeighborhoods(uint3 id : SV_DispatchThreadID) {
 
     //Making sure noises range is okay
-    bool spawn = (Result[id.xy].x > 0.5);
-    Result[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
+    bool spawn = (Input[id.xy].x > 0.5);
+    Input[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
 
 
 
     float avg[2] = {0, 0};
 
     for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
-        if (Result[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer1[i]].x > 0) {
             avg[0]++;
         }
     }
     for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
-        if (Result[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer2[j]].x > 0) {
             avg[1]++;
         }
     }
     avg[0] = avg[0] / NeighborhoodBuffer1Size;
     avg[1] = avg[1] / NeighborhoodBuffer2Size;
 
-    uint outputVal = Result[id.xy].x;
+    uint outputVal = Input[id.xy].x;
 
 
 
-    uint threadRegion= id.x/(width/2) +2*id.y/(height/2)-1;
+    uint threadRegion= id.x/(width/2) +2*(id.y/(height/2));
     
     thresholdsArray thArray;
     outputValueArray valArray;
@@ -144,7 +167,7 @@ void TwoNeighborhoods(uint3 id : SV_DispatchThreadID) {
         SetThresholds(thArray, RandomDataBuffer2);
         SetOutputValueArray(valArray, RandomDataBuffer2);
     }
-    else // threadRegion == 3
+    else
     {
         SetThresholds(thArray, RandomDataBuffer3);
         SetOutputValueArray(valArray, RandomDataBuffer3);
@@ -174,9 +197,9 @@ void TwoNeighborhoods(uint3 id : SV_DispatchThreadID) {
     }
 
 
-    if(Result[id.xy].r==1){
+    if(Input[id.xy].r==1){
         Result[id.xy] = float4(outputVal, outputVal, 0, 1);
-    }else if(Result[id.xy].r==0 && outputVal==1){
+    }else if(Input[id.xy].r==0 && outputVal==1){
         Result[id.xy] = float4(outputVal, 0.0, 0.5, 1);
     }else{
         Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
@@ -189,25 +212,25 @@ void TwoNeighborhoods(uint3 id : SV_DispatchThreadID) {
 [numthreads(8,8,1)]
 void ThreeNeighborhoods(uint3 id : SV_DispatchThreadID) {
     //Setting noise 
-    bool spawn = (Result[id.xy].x > 0.5);
-    Result[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
+    bool spawn = (Input[id.xy].x > 0.5);
+    Input[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
 
 
     float avg[3] = {0, 0, 0};
 
     // Get and set average values for each neighborhood
     for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
-        if (Result[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer1[i]].x > 0) {
             avg[0]++;
         }
     }
     for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
-        if (Result[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer2[j]].x > 0) {
             avg[1]++;
         }
     }
     for (uint k = 0; k < NeighborhoodBuffer3Size; k++) {
-        if (Result[id.xy + NeighborhoodBuffer3[k]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer3[k]].x > 0) {
             avg[2]++;
         }
     }
@@ -216,11 +239,11 @@ void ThreeNeighborhoods(uint3 id : SV_DispatchThreadID) {
     avg[1] = avg[1] / NeighborhoodBuffer2Size;
     avg[2] = avg[2] / NeighborhoodBuffer3Size;
 
-    uint outputVal = Result[id.xy].x;
+    uint outputVal = Input[id.xy].x;
 
 
 
-    uint threadRegion= id.x/(width/2) +2*id.y/(height/2)-1;
+    uint threadRegion= id.x/(width/2) +2*(id.y/(height/2));
     
     thresholdsArray thArray;
     outputValueArray valArray;
@@ -277,30 +300,30 @@ void ThreeNeighborhoods(uint3 id : SV_DispatchThreadID) {
 [numthreads(8,8,1)]
 void FourNeighborhoods(uint3 id : SV_DispatchThreadID) {
     //Setting noise 
-    bool spawn = (Result[id.xy].x > 0.5);
-    Result[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
+    bool spawn = (Input[id.xy].x > 0.5);
+    Input[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
 
 
     float avg[4] = {0, 0, 0, 0};
 
     // Get and set average values for each neighborhood
     for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
-        if (Result[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer1[i]].x > 0) {
             avg[0]++;
         }
     }
     for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
-        if (Result[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer2[j]].x > 0) {
             avg[1]++;
         }
     }
     for (uint k = 0; k < NeighborhoodBuffer3Size; k++) {
-        if (Result[id.xy + NeighborhoodBuffer3[k]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer3[k]].x > 0) {
             avg[2]++;
         }
     }
     for (uint l = 0; l < NeighborhoodBuffer4Size; l++) {
-        if (Result[id.xy + NeighborhoodBuffer3[l]].x > 0) {
+        if (Input[id.xy + NeighborhoodBuffer3[l]].x > 0) {
             avg[3]++;
         }
     }
@@ -312,7 +335,7 @@ void FourNeighborhoods(uint3 id : SV_DispatchThreadID) {
 
 
 
-    uint outputVal = Result[id.xy].x;
+    uint outputVal = Input[id.xy].x;
 
 
     
@@ -337,7 +360,7 @@ void FourNeighborhoods(uint3 id : SV_DispatchThreadID) {
         SetThresholds(thArray, RandomDataBuffer2);
         SetOutputValueArray(valArray, RandomDataBuffer2);
     }
-    else // threadRegion == 3
+    else if(threadRegion == 3)
     {
         SetThresholds(thArray, RandomDataBuffer3);
         SetOutputValueArray(valArray, RandomDataBuffer3);
@@ -367,6 +390,47 @@ void FourNeighborhoods(uint3 id : SV_DispatchThreadID) {
     }
 
     Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
+}
+
+[numthreads(8, 8, 1)]
+void Conway (uint3 id : SV_DispatchThreadID)
+{
+    int2 coord = id.xy;
+
+    int newState;
+
+    // Count the number of alive neighbors
+    int aliveNeighbors = 0;
+    for (int y = -1; y <= 1; y++) {
+        for (int x = -1; x <= 1; x++) {
+            if (x == 0 && y == 0) continue; // Skip the current cell
+            int2 neighborCoord = coord + int2(x, y);
+            
+            float4 neighborCell = Input[neighborCoord];
+
+            aliveNeighbors += (neighborCell.r > 0.5) ? 1 : 0;
+            
+        }
+    }
+    
+    int state= Input[coord].r;
+
+
+    if (state > 0.5) { // Current cell is alive
+        if (aliveNeighbors == 2 || aliveNeighbors == 3) {
+            newState = 1.0; // Survive
+        } else {
+            newState = 0.0; // Die
+        }
+    } else { // Current cell is dead
+        if (aliveNeighbors == 3) {
+            newState = 1.0; // Become alive
+        }
+    }
+    // Apply the rules of Conway's Game of Life
+   
+    // Write the new state to the result
+    Result[coord] = float4(newState, newState, newState, 1.0);
 }
 
 

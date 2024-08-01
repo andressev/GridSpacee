@@ -2,363 +2,488 @@ Base path: 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data', plugins 
 Cmd: initializeCompiler
 
 Cmd: compileComputeKernel
-  insize=6017 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(66): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(80): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5900
-
-Cmd: compileComputeKernel
-  insize=6017 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(66): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(80): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=4540
-
-Cmd: compileComputeKernel
-  insize=6017 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6069 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(129): 'SetThresholds': no matching 2 parameter function
-  error: 2 plat 4 at Automata.compute(129): undeclared identifier 'RandomDataBuffer'
+  insize=11075 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(136): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(140): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(144): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(148): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(152): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(156): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(160): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(161): invalid subscript 'nh'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6069 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(129): 'SetThresholds': no matching 2 parameter function
-  error: 2 plat 4 at Automata.compute(129): undeclared identifier 'RandomDataBuffer'
+  insize=11075 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(136): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(140): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(144): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(148): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(152): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(156): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(160): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(161): invalid subscript 'nh'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6069 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(129): 'SetThresholds': no matching 2 parameter function
-  error: 2 plat 4 at Automata.compute(129): undeclared identifier 'RandomDataBuffer'
+  insize=11075 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(136): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(140): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(144): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(148): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(152): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(156): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(160): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(161): invalid subscript 'nh'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6073 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6073 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=4505
-
-Cmd: compileComputeKernel
-  insize=6073 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6274 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(90): unrecognized identifier 'BufferDataArray'
+  insize=11075 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(136): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(140): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(144): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(148): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(152): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(156): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(160): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(161): invalid subscript 'nh'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6274 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(90): unrecognized identifier 'BufferDataArray'
+  insize=10926 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(85): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(99): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(126): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(130): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(134): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(138): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(150): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(429): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=16058
+
+Cmd: compileComputeKernel
+  insize=10926 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(85): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(99): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(126): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(130): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(134): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(138): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(150): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=12628
+
+Cmd: compileComputeKernel
+  insize=10926 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(85): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(99): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(126): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(130): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(134): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(138): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(150): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=8980
+
+Cmd: compileComputeKernel
+  insize=10926 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(126): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(130): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(134): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(138): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(150): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1666
+
+Cmd: compileComputeKernel
+  insize=13500 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6274 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(90): unrecognized identifier 'BufferDataArray'
+  insize=13500 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6467 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(142): syntax error: unexpected token 'thresholdsArray'
-  error: 2 plat 4 at Automata.compute(143): undeclared identifier 'thArray'
+  insize=13500 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6467 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(142): syntax error: unexpected token 'thresholdsArray'
-  error: 2 plat 4 at Automata.compute(143): undeclared identifier 'thArray'
+  insize=13500 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6467 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(142): syntax error: unexpected token 'thresholdsArray'
-  error: 2 plat 4 at Automata.compute(143): undeclared identifier 'thArray'
+  insize=13509 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6468 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6468 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(143): sampler array index must be a literal expression
+  insize=13509 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6468 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6489 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6489 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(144): sampler array index must be a literal expression
+  insize=13509 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6489 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6487 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6487 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(144): sampler array index must be a literal expression
+  insize=13509 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): unrecognized identifier 'averageRingNeighbors'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6487 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6486 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6486 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(144): sampler array index must be a literal expression
+  insize=13498 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): syntax error: unexpected token 'flat4'
+  error: 2 plat 4 at Test.compute(210): undeclared identifier 'id'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6486 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6495 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(138): unrecognized identifier 'constant'
+  insize=13498 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): syntax error: unexpected token 'flat4'
+  error: 2 plat 4 at Test.compute(210): undeclared identifier 'id'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6495 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(138): unrecognized identifier 'constant'
+  insize=13498 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): syntax error: unexpected token 'flat4'
+  error: 2 plat 4 at Test.compute(210): undeclared identifier 'id'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6495 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(138): unrecognized identifier 'constant'
+  insize=13498 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(203): syntax error: unexpected token 'flat4'
+  error: 2 plat 4 at Test.compute(210): undeclared identifier 'id'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6492 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(139): l-value specifies const object
+  insize=13499 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(522): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=16058
+
+Cmd: compileComputeKernel
+  insize=13499 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=12628
+
+Cmd: compileComputeKernel
+  insize=13499 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=8980
+
+Cmd: compileComputeKernel
+  insize=13499 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1666
+
+Cmd: compileComputeKernel
+  insize=13810 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(220): 'nh': array dimensions of function parameters must be explicit
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6492 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(139): l-value specifies const object
+  insize=13810 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(220): 'nh': array dimensions of function parameters must be explicit
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6492 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(139): l-value specifies const object
+  insize=13810 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(220): 'nh': array dimensions of function parameters must be explicit
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6472 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6472 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(143): sampler array index must be a literal expression
+  insize=13810 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(220): 'nh': array dimensions of function parameters must be explicit
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6472 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6450 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
-
-Cmd: compileComputeKernel
-  insize=6450 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=4505
-
-Cmd: compileComputeKernel
-  insize=6450 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=6630 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 2 plat 4 at Automata.compute(143): undeclared identifier 'threadRegions'
+  insize=13812 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(226): undeclared identifier 'sumsPerRing'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6630 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 2 plat 4 at Automata.compute(143): undeclared identifier 'threadRegions'
+  insize=13812 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(226): undeclared identifier 'sumsPerRing'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6630 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 2 plat 4 at Automata.compute(143): undeclared identifier 'threadRegions'
+  insize=13812 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(226): undeclared identifier 'sumsPerRing'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6648 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 1 plat 4 at Automata.compute(143): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at Automata.compute(144): array, matrix, vector, or indexable object type expected in index expression
+  insize=13812 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 2 plat 4 at Test.compute(226): undeclared identifier 'sumsPerRing'
  ok=0 outsize=0
 
 Cmd: compileComputeKernel
-  insize=6648 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 1 plat 4 at Automata.compute(143): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at Automata.compute(144): array, matrix, vector, or indexable object type expected in index expression
- ok=0 outsize=0
+  insize=13848 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(535): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=16058
 
 Cmd: compileComputeKernel
-  insize=6648 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(142): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 1 plat 4 at Automata.compute(143): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at Automata.compute(144): array, matrix, vector, or indexable object type expected in index expression
- ok=0 outsize=0
+  insize=13848 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=12628
 
 Cmd: compileComputeKernel
-  insize=6983 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
+  insize=13848 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=8980
 
 Cmd: compileComputeKernel
-  insize=6983 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(161): sampler array index must be a literal expression
- ok=0 outsize=0
+  insize=13848 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(164): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(168): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(171): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(174): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(177): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(180): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Test.compute(183): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1666
 
 Cmd: compileComputeKernel
-  insize=6983 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
+  insize=13660 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(519): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=16058
 
 Cmd: compileComputeKernel
-  insize=6931 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
+  insize=13660 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=12628
 
 Cmd: compileComputeKernel
-  insize=6931 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(65): forced to unroll loop, but unrolling failed.
-  error: 2 plat 4 at Automata.compute(66): Resources being indexed cannot come from conditional expressions, they must come from literal expressions.
- ok=0 outsize=0
+  insize=13660 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=8980
 
 Cmd: compileComputeKernel
-  insize=6931 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
+  insize=13660 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=1666
 
 Cmd: compileComputeKernel
-  insize=6703 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 1 plat 4 at Automata.compute(147): signed/unsigned mismatch, unsigned assumed
- ok=1 outsize=5865
+  insize=13644 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(519): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=14358
 
 Cmd: compileComputeKernel
-  insize=6703 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(65): forced to unroll loop, but unrolling failed.
-  error: 2 plat 4 at Automata.compute(66): Resource being indexed is uninitialized.
-  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 1 plat 4 at Automata.compute(147): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at Automata.compute(148): sampler array index must be a literal expression, forcing loop to unroll
- ok=0 outsize=0
+  insize=13644 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=11236
 
 Cmd: compileComputeKernel
-  insize=6703 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(146): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
-  error: 1 plat 4 at Automata.compute(147): signed/unsigned mismatch, unsigned assumed
- ok=1 outsize=465
+  insize=13644 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=8144
 
 Cmd: compileComputeKernel
-  insize=6973 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=5865
+  insize=13644 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=1666
 
 Cmd: compileComputeKernel
-  insize=6973 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
+  insize=13435 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(512): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=14358
 
 Cmd: compileComputeKernel
-  insize=6973 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
+  insize=13435 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=11236
 
 Cmd: compileComputeKernel
-  insize=7167 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=12643
+  insize=13435 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=8144
 
 Cmd: compileComputeKernel
-  insize=7167 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(67): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(81): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
+  insize=13435 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=1666
 
 Cmd: compileComputeKernel
-  insize=7167 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
+  insize=13396 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(491): use of potentially uninitialized variable (thArray) use of potentially uninitialized variable (valArray)
+ ok=1 outsize=14358
 
 Cmd: compileComputeKernel
-  insize=9887 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 2 plat 4 at Automata.compute(311): array index out of bounds
- ok=0 outsize=0
+  insize=13396 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=11236
 
 Cmd: compileComputeKernel
-  insize=9887 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=12643
+  insize=13396 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Test.compute(95): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+  error: 1 plat 4 at Test.compute(109): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+ ok=1 outsize=8144
 
 Cmd: compileComputeKernel
-  insize=9887 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
-
-Cmd: compileComputeKernel
-  insize=9887 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=15453
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=12643
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=16029
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=12643
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=9892 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=16001
-
-Cmd: compileComputeKernel
-  insize=9892 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=12643
-
-Cmd: compileComputeKernel
-  insize=9892 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
-
-Cmd: compileComputeKernel
-  insize=9892 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=FourNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=15973
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=ThreeNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=12643
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=TwoNeighborhoods ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0  error: 1 plat 4 at Automata.compute(68): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
-  error: 1 plat 4 at Automata.compute(82): array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
- ok=1 outsize=9383
-
-Cmd: compileComputeKernel
-  insize=9890 file=Assets/ComputeShaders/GameOfLife/Automata.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=465
+  insize=13396 file=Assets/ComputeShaders/GameOfLife/Test.compute kernel=CSInit ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202239> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=1666
 
 Cmd: shutdown

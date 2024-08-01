@@ -41,7 +41,7 @@ public class Cell : MonoBehaviour
 
         }
         state=!state;
-        Debug.Log(this.counter);
+        
 
     }
 

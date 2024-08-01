@@ -98,7 +98,7 @@ public class GridGenerator : MonoBehaviour
         {
             cellScript.SetCoordinates(x, y, counter);
             coordinatesToCounter.Add(new Vector2Int(x,y), counter);
-            Debug.Log($"Coords: {x},{y} and counter: {counter}");
+            
         }
         
         
@@ -140,7 +140,7 @@ public class GridGenerator : MonoBehaviour
 
         double norm= AutomataHelper.Norm(cell.coord);
 
-        int ringRadius= (norm - Math.Floor(norm)>0.5) ? (int)norm+1 : (int)norm;
+        int ringRadius= (norm - Math.Floor(norm)>=0.5) ? (int)norm+1 : (int)norm;
 
 
         Vector2Int coordinates= new Vector2Int(ringRadius, 0);
@@ -159,7 +159,7 @@ public class GridGenerator : MonoBehaviour
 
        
         int auxPoint= 1-ringRadius;
-        while(coordinates.x>coordinates.y){
+        while(coordinates.x>=coordinates.y){
 
         
             coordinates.y++;
@@ -178,7 +178,7 @@ public class GridGenerator : MonoBehaviour
                 return;
             }
             
-            Debug.Log("eat some pussy");
+           
             toggleCell(getCellGameObject(coordinates));
             toggleCell(getCellGameObject(new Vector2Int(-coordinates.x, coordinates.y)));
             toggleCell(getCellGameObject(new Vector2Int(coordinates.x, -coordinates.y)));
@@ -202,6 +202,14 @@ public class GridGenerator : MonoBehaviour
     }
     public Cell getCellGameObject(Vector2Int coord){
         return transform.GetChild(coordinatesToCounter[coord]).GetComponent<Cell>();
+    }
+    //Turn cell on or of and add to List
+    public void toggleCell(Cell cell){
+        if(!cell.state){
+            neighbors.Add(cell.coord);
+            cell.changeState();
+        }
+        
     }
     // public void AddSymetrically(Cell cell){
     //     int x = cell.coord.x;
@@ -250,14 +258,6 @@ public class GridGenerator : MonoBehaviour
 
     // }
 
-    //Turn cell on or of and add to List
-    public void toggleCell(Cell cell){
-        if(!cell.state){
-            neighbors.Add(cell.coord);
-            cell.changeState();
-        }
-        
-    }
 
     
 
