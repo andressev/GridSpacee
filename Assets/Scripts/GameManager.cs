@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public Transform nhGrid;
     public GameObject nhPrefab;
 
+    public GameObject mutationUI;
+
 
    
 
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
         gridUI.SetActive(false);
         pickUI.SetActive(false);
         menuUI.SetActive(true);
+        mutationUI.SetActive(false);
 
     }
     public void OpenGridEditor(){
@@ -83,6 +86,18 @@ public class GameManager : MonoBehaviour
 
     public void ResetNeighborhood(){
         gridGen.GenerateGrid();
+    }
+    public void OpenMutationMode(){
+        menuUI.SetActive(false);
+        mutationUI.SetActive(true);
+        MNCA mnca= simulation.GetComponent<MNCA>();
+        mnca.kernelToggle=4;
+        mnca.SendRandomData(32,0);
+        mnca.SendRandomData(32,1);
+        mnca.SendRandomData(32,2);
+        mnca.SendRandomData(32,3);
+
+
     }
 
     public void ToggleGrid(){
@@ -104,7 +119,7 @@ public class GameManager : MonoBehaviour
 
     //Note for my scren width 1940x 1600 works
     //For QHD 1950 x 1420 works
-
+    //For4k 2865x2116 works 
 
     //Save neighborhood button
     public void SaveNeighborhood(){

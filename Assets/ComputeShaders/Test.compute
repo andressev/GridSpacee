@@ -1,0 +1,519 @@
+#pragma kernel CSInit
+#pragma kernel TwoNeighborhoods
+#pragma kernel ThreeNeighborhoods
+#pragma kernel FourNeighborhoods
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+//------------DATA STRUCTURES USED
+//---------------------------------------------------------------------------------------------------------------------------------
+
+RWTexture2D<float4> Input;
+RWTexture2D<float4> Result;
+
+// Screen variables defined in C# script
+uint height;
+uint width;
+
+
+//Neighborhoodbuffers
+StructuredBuffer<int2> NeighborhoodBuffer1;
+StructuredBuffer<int2> NeighborhoodBuffer2;
+StructuredBuffer<int2> NeighborhoodBuffer3;
+StructuredBuffer<int2> NeighborhoodBuffer4;
+
+//possible neighbrohoods
+StructuredBuffer<int2> NeighborhoodPreCalc;
+
+
+uint NeighborhoodBuffer1Size;
+uint NeighborhoodBuffer2Size;
+uint NeighborhoodBuffer3Size;
+uint NeighborhoodBuffer4Size;
+
+
+//RandomDataBuffer
+StructuredBuffer<uint> RandomDataBuffer0;
+StructuredBuffer<uint> RandomDataBuffer1;
+StructuredBuffer<uint> RandomDataBuffer2;
+StructuredBuffer<uint> RandomDataBuffer3;
+
+
+// Mouse interactions
+float mousePosX;
+float mousePosY;
+bool clickedLeft;
+bool clickedRight;
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+//------------FUNCTIONS AND STRUCTURES TO GENRALIZE CONDITION DATA 
+//---------------------------------------------------------------------------------------------------------------------------------
+float remapRange(uint number){
+    return float(number)/127.0f;
+}
+
+
+float4 get4ValuesOutOf32Bits(uint data){
+    uint mask= 0x7F;
+    float4 result;
+
+    result[0]=(remapRange(data & mask)); //127 is 1111111 in binary and 7F in hex
+    result[1]=(remapRange((data>>7)& mask));
+    result[2]=(remapRange((data>>14)& mask));
+    result[3]=(remapRange((data>>21)& mask));
+
+    return result;
+}
+
+
+
+struct thresholdsArray{
+    float thresholds[64];
+};
+
+
+void SetThresholds(inout thresholdsArray thArray, StructuredBuffer<uint> data){
+    for(uint i= 0; i<64; i+=4){
+        float4 addToArray=get4ValuesOutOf32Bits(data[i/4]);
+        thArray.thresholds[i]=addToArray.r;
+        thArray.thresholds[i+1]=addToArray.g;
+        thArray.thresholds[i+2]=addToArray.b;
+        thArray.thresholds[i+3]=addToArray.a;
+
+    }
+}
+
+struct outputValueArray{
+    int outputValArray[32];
+};
+
+void SetOutputValueArray(inout outputValueArray valArray, StructuredBuffer<uint> data){
+    for(uint i=0; i<32; i++){
+        valArray.outputValArray[i]=(data[16]>>i)&1;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+//------------FUNCTIONS AND STRUCTURES TO GENRALIZE NEIGHBORHOOD DATA
+//---------------------------------------------------------------------------------------------------------------------------------
+/*WORKFLOW--
+1-First we convert the received data into 8 binary representation array using SetNeighborhoodBinary
+2-Then we get the sums fot the 16 possible rings using the compute shader dispatch id using SetNeighborsSum
+3-Then given a neighborhood binary representation, we add the respective sums of rings i.e [0,0,0,1] we would add the third
+ring's sum to the last index of the neighborhoodBinar representation i.e [0,0,0,1,5]. theres is five neighbors in ring 5.
+4- 
+
+are alive, th
+
+*/
+
+
+struct neighborhoodBinary{
+    int nh[16];
+};
+
+
+
+//struuct of binary representation arraysfor eight neighborhoods
+struct neighborhoodBinaryArray{
+    //last index contains the sum of neighbors
+    neighborhoodBinary neighborhoodArrayRep[8];
+};
+
+//Gets the binary array representation of the neighborhoods
+void SetNeighborhoodBinary(inout neighborhoodBinaryArray nhBinary, StructuredBuffer<uint> data){
+
+    for (uint i = 0; i < 16; i++) {
+        for(uint j=0; j<8; j+=2){
+            nhBinary.neighborhoodArrayRep[j].nh[i]   = (data[17] >> i) & 1;
+            nhBinary.neighborhoodArrayRep[j+1].nh[i] = (data[17] >>(i+16)) & 1;
+        }
+    }
+    
+}
+
+uint ringSizes[16] = {
+    1, 8, 12, 16, 24, 28, 36, 40,
+    44, 52, 56, 64, 68, 72, 80, 84
+    
+};
+
+struct sumRingNeighbors{
+
+    int sumsPerRing[16];
+
+};
+
+//Goes through the flat matrix checking offsets and adds to its respective avsPerRing[i], when finds flag 73
+// jumps to next index of multiple 93 --  93 cause its the biggest neighborhood possible
+void SetNeighborsSum(inout sumRingNeighbors sumRings, StructuredBuffer<int2> coords, RWTexture2D<float4> Input, int2 id){
+
+    
+    for(int i=0; i<16; i++){
+        for(int j=0; j<93; j++){
+            if(coords[(i*93)+j].x==73){
+                break;
+            }else if(Input[id+coords[(i*93)+j]].x>0){
+                sumRings.sumsPerRing[i]++;
+            }
+        }
+    }
+
+}
+
+
+//now a function to get the avarege given a binary neighbrohood and an array of totalALive 
+float GetAvg(neighborhoodBinary nhBinary, sumRingNeighbors alive){
+    int totalAliveNeighbors=0;
+    int totalPossibleNeighbors=0;
+
+    for(int i=0; i<16; i++){
+        if(nhBinary.nh[i]){
+            totalAliveNeighbors+=alive.sumsPerRing[i];
+            totalPossibleNeighbors+=ringSizes[i];
+        }
+    }
+
+    return float(totalAliveNeighbors)/float(totalPossibleNeighbors);
+
+}
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+//------------KERNELS
+//---------------------------------------------------------------------------------------------------------------------------------
+
+// Set noise
+[numthreads(8,8,1)]
+void CSInit(uint3 id : SV_DispatchThreadID) {
+
+    int state=0;
+
+    state=Input[id.xy].r>0.5? 1:0;
+
+    int sum=0; 
+
+    sum+=Input[id.xy+int2(1,0)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(1,-1)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(1,1)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(0,1)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(0,-1)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(-1,1)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(-1,0)].r>0.5? 1:0;
+    sum+=Input[id.xy+int2(-1,-1)].r>0.5? 1:0;
+
+    
+    if(sum==0 || sum==1){
+        state=0;
+    }else if(sum==3){
+        state=1;
+    }else if(sum>=4 && sum<=8){
+        state=0;
+    }
+
+    Result[id.xy]=float4(state,state, state,1);
+    
+
+}
+
+[numthreads(8,8,1)]
+void TwoNeighborhoods(uint3 id : SV_DispatchThreadID) {
+    
+
+
+
+    float avg[2] = {0, 0};
+
+    for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
+        if (Input[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+            avg[0]++;
+        }
+    }
+    for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
+        if (Input[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+            avg[1]++;
+        }
+    }
+    avg[0] = avg[0] / NeighborhoodBuffer1Size;
+    avg[1] = avg[1] / NeighborhoodBuffer2Size;
+
+    uint outputVal = Input[id.xy].x;
+
+
+
+    uint threadRegion= id.x/(width/2) +2*(id.y/(height/2));
+    
+    thresholdsArray thArray;
+    outputValueArray valArray;
+    
+    //Setting regions
+    if (threadRegion == 0)
+    {
+        SetThresholds(thArray, RandomDataBuffer0);
+        SetOutputValueArray(valArray, RandomDataBuffer0);
+    }
+    else if (threadRegion == 1)
+    {
+        SetThresholds(thArray, RandomDataBuffer1);
+        SetOutputValueArray(valArray, RandomDataBuffer1);
+    }
+    else if (threadRegion == 2)
+    {
+        SetThresholds(thArray, RandomDataBuffer2);
+        SetOutputValueArray(valArray, RandomDataBuffer2);
+    }
+    else
+    {
+        SetThresholds(thArray, RandomDataBuffer3);
+        SetOutputValueArray(valArray, RandomDataBuffer3);
+    }
+    
+
+
+
+    //this loops checks conditions, using the random data
+    for(uint condition = 0; condition < 16; condition += 2) {
+        if (avg[condition / 8] >= thArray.thresholds[condition] &&
+            avg[condition / 8] <= thArray.thresholds[condition + 1]) {
+            outputVal = valArray.outputValArray[condition / 2];
+        }
+    }
+
+
+    
+
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy) < 19);
+
+    if (clickedLeft && inRadius) {
+        outputVal = 0;
+    }
+    if (clickedRight && inRadius) {
+        outputVal = 1;
+    }
+
+
+
+  
+    Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
+    
+
+
+}
+
+[numthreads(8,8,1)]
+void ThreeNeighborhoods(uint3 id : SV_DispatchThreadID) {
+    bool spawn = (Input[id.xy].x > 0.5);
+    Input[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
+
+
+    float avg[3] = {0, 0, 0};
+
+    // Get and set average values for each neighborhood
+    for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
+        if (Input[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+            avg[0]++;
+        }
+    }
+    for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
+        if (Input[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+            avg[1]++;
+        }
+    }
+    for (uint k = 0; k < NeighborhoodBuffer3Size; k++) {
+        if (Input[id.xy + NeighborhoodBuffer3[k]].x > 0) {
+            avg[2]++;
+        }
+    }
+
+    avg[0] = avg[0] / NeighborhoodBuffer1Size;
+    avg[1] = avg[1] / NeighborhoodBuffer2Size;
+    avg[2] = avg[2] / NeighborhoodBuffer3Size;
+
+    uint outputVal = Input[id.xy].x;
+
+
+
+    uint threadRegion= id.x/(width/2) +2*(id.y/(height/2));
+    
+    thresholdsArray thArray;
+    outputValueArray valArray;
+    
+    //Setting regions
+    if (threadRegion == 0)
+    {
+        SetThresholds(thArray, RandomDataBuffer0);
+        SetOutputValueArray(valArray, RandomDataBuffer0);
+    }
+    else if (threadRegion == 1)
+    {
+        SetThresholds(thArray, RandomDataBuffer1);
+        SetOutputValueArray(valArray, RandomDataBuffer1);
+    }
+    else if (threadRegion == 2)
+    {
+        SetThresholds(thArray, RandomDataBuffer2);
+        SetOutputValueArray(valArray, RandomDataBuffer2);
+    }
+    else // threadRegion == 3
+    {
+        SetThresholds(thArray, RandomDataBuffer3);
+        SetOutputValueArray(valArray, RandomDataBuffer3);
+    }
+    
+    
+
+    // For compactness a loop that has four conditions per neighborhood avg, uses 24 thresholds (2 thresholds * 4 conditions * 3 neighborhoods = 24)
+    for (uint condition = 0; condition < 24; condition += 2) {
+        if (avg[condition / 8] >= thArray.thresholds[condition] &&
+            avg[condition / 8] <= thArray.thresholds[condition + 1]) {
+            outputVal = valArray.outputValArray[condition / 2];
+        }
+    }
+
+
+
+
+    // Mouse logic to kill/birth in a radius
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy) < 19);
+
+    if (clickedLeft && inRadius) {
+        outputVal = 0;
+    }
+    if (clickedRight && inRadius) {
+        outputVal = 1;
+    }
+
+    Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
+
+}
+
+[numthreads(8,8,1)]
+void FourNeighborhoods(uint3 id : SV_DispatchThreadID) {
+    bool spawn = (Input[id.xy].x > 0.5);
+    Input[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
+
+
+    float avg[4] = {0, 0, 0, 0};
+
+    // Get and set average values for each neighborhood
+    for (uint i = 0; i < NeighborhoodBuffer1Size; i++) {
+        if (Input[id.xy + NeighborhoodBuffer1[i]].x > 0) {
+            avg[0]++;
+        }
+    }
+    for (uint j = 0; j < NeighborhoodBuffer2Size; j++) {
+        if (Input[id.xy + NeighborhoodBuffer2[j]].x > 0) {
+            avg[1]++;
+        }
+    }
+    for (uint k = 0; k < NeighborhoodBuffer3Size; k++) {
+        if (Input[id.xy + NeighborhoodBuffer3[k]].x > 0) {
+            avg[2]++;
+        }
+    }
+    for (uint l = 0; l < NeighborhoodBuffer4Size; l++) {
+        if (Input[id.xy + NeighborhoodBuffer3[l]].x > 0) {
+            avg[3]++;
+        }
+    }
+
+    avg[0] = avg[0] / NeighborhoodBuffer1Size;
+    avg[1] = avg[1] / NeighborhoodBuffer2Size;
+    avg[2] = avg[2] / NeighborhoodBuffer3Size;
+    avg[3] = avg[3] / NeighborhoodBuffer4Size;
+
+
+
+    uint outputVal = Input[id.xy].x;
+
+
+    
+    uint threadRegion= id.x/(width/2) +2*(id.y/(height/2));
+    
+    thresholdsArray thArray;
+    outputValueArray valArray;
+    
+    //Setting regions
+    if (threadRegion == 0)
+    {
+        SetThresholds(thArray, RandomDataBuffer0);
+        SetOutputValueArray(valArray, RandomDataBuffer0);
+    }
+    else if (threadRegion == 1)
+    {
+        SetThresholds(thArray, RandomDataBuffer1);
+        SetOutputValueArray(valArray, RandomDataBuffer1);
+    }
+    else if (threadRegion == 2)
+    {
+        SetThresholds(thArray, RandomDataBuffer2);
+        SetOutputValueArray(valArray, RandomDataBuffer2);
+    }
+    else if(threadRegion == 3)
+    {
+        SetThresholds(thArray, RandomDataBuffer3);
+        SetOutputValueArray(valArray, RandomDataBuffer3);
+    }
+    
+    
+
+    // For compactness a loop that has four conditions per neighborhood avg, uses 24 thresholds (2 thresholds * 4 conditions * 3 neighborhoods = 24)
+    for (uint condition = 0; condition < 32; condition += 2) {
+        if (avg[condition / 8] >= thArray.thresholds[condition] &&
+            avg[condition / 8] <= thArray.thresholds[condition + 1]) {
+            outputVal = valArray.outputValArray[condition / 2];
+        }
+    }
+
+
+
+
+    // Mouse logic to kill/birth in a radius
+    bool inRadius = (distance(float2(mousePosX, mousePosY), id.xy) < 19);
+
+    if (clickedLeft && inRadius) {
+        outputVal = 0;
+    }
+    if (clickedRight && inRadius) {
+        outputVal = 1;
+    }
+
+    Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
+}
+
+    

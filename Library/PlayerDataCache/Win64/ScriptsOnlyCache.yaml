@@ -34,6 +34,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -64,6 +65,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
@@ -492,8 +494,311 @@ ScriptsOnlyBuild:
     fullTypeName: ClickCell
     methodName: OnImageClick
   - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ResetPickedNeighboorhood
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -695,6 +1000,129 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: OpenMutationMode
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -761,6 +1189,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ToggleGrid
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -1232,6 +1663,405 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -1628,6 +2458,123 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ResetNeighborhood
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -1715,6 +2662,102 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: OpenGridEditor
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -1934,6 +2977,63 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: SaveNeighborhood
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: GetMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -1970,6 +3070,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: GetMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2012,6 +3118,45 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: GetMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2105,6 +3250,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ApplyNeighborhoods
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2135,6 +3289,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: OpenPicker
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2316,38 +3473,17 @@ ScriptsOnlyBuild:
     fullTypeName: ClickCell
     methodName: OnImageClick
   - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
+    fullTypeName: MNCA
+    methodName: AddToAmountOfNeighborhoods
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
+    fullTypeName: MNCA
+    methodName: SubtractFromAmountOfNeighborhoods
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   sceneClasses:
     Assets/Scenes/NeighborhoodMaker.unity:
     - Class: 1
@@ -2385,45 +3521,47 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1566}
-    - Class: 114
       Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 1612}
+      Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1822}
+      Script: {instanceID: 1614}
     - Class: 114
-      Script: {instanceID: 2190}
+      Script: {instanceID: 1824}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2192}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 4078}
+      Script: {instanceID: 3370}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4706}
+      Script: {instanceID: 4330}
     - Class: 114
-      Script: {instanceID: 4730}
+      Script: {instanceID: 4708}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 5706}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 6020}
+      Script: {instanceID: 5264}
     - Class: 114
-      Script: {instanceID: 6286}
+      Script: {instanceID: 5708}
     - Class: 114
-      Script: {instanceID: 7012}
+      Script: {instanceID: 6022}
+    - Class: 114
+      Script: {instanceID: 6288}
+    - Class: 114
+      Script: {instanceID: 7014}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2509,7 +3647,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionStayMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e2d99cabdc872b5b0ee0947938117de7
+      Hash: 4d4eff3a2002970747a3e8cdaa85235d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MNCA
@@ -3223,7 +4361,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c64226969f896a68c02f80d86ceb504b
+      Hash: 397c2840ba7c6ef6f7fa656c104925af
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -3314,4 +4452,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/NeighborhoodMaker.unity
-  playerPath: C:/Users/Andres/Desktop/GridSpaceBuild/GridSpace.exe
+  playerPath: C:/Users/Andres/Desktop/GridSpaceWindows/GridSpace.exe

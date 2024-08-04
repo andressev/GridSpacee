@@ -48,6 +48,14 @@ namespace AutomataUtilities{
 			return buffer;
 		}
 
+		public static ComputeBuffer CreateBufferConstant(int count, int stride, ComputeBufferType type){
+			ComputeBuffer buffer = new ComputeBuffer(count, stride, type);
+			buffers.Add(buffer);
+
+			
+			return buffer;
+		}
+
 		public static void DisposeBuffer(ComputeBuffer buffer)
 		{
 			if (buffer != null)
@@ -154,75 +162,57 @@ namespace AutomataUtilities{
 
 			
 		}
-		public static Vector2Int[] GenerateRingCoords(int radius, Vector2Int[] ring){
-			
-			int auxPoint= 1-radius;
-			int count=0;
+		public static Vector2Int[] GenerateRingCoords(int radius, Vector2Int[] ring) {
+			int auxPoint = 1 - radius;
+			int count = 0;
 
-
-			if(radius==0){
-				ring[0]=new Vector2Int(0,0);
-				ring[1]=new Vector2Int(73,0);
+			if (radius == 0) {
+				ring[0] = new Vector2Int(0, 0);
+				ring[1] = new Vector2Int(73, 0);
 				return ring;
 			}
-			
 
+			Vector2Int coordinates = new Vector2Int(radius, 0);
 
-			Vector2Int coordinates= new Vector2Int(radius, 0);
+			ring[count++] = coordinates;
+			ring[count++] = new Vector2Int(-coordinates.x, 0);
+			ring[count++] = new Vector2Int(0, coordinates.x);
+			ring[count++] = new Vector2Int(0, -coordinates.x);
 
-			ring[count]=coordinates;
-			count++;
-			ring[count]=new Vector2Int(-coordinates.x, 0);
-			count++;
-			ring[count]=new Vector2Int(0, coordinates.x);
-			count++;
-			ring[count]=new Vector2Int(0, -coordinates.x);
-
-
-       		while(coordinates.x>=coordinates.y){
-
-        
+			while (coordinates.x >= coordinates.y) {
 				coordinates.y++;
 
-				
-				//mid point inside or on the perimeter
-				if(auxPoint<=0){
-					auxPoint= auxPoint + 2*coordinates.y +1;   
-				}
-				else{
+				// Mid point inside or on the perimeter
+				if (auxPoint <= 0) {
+					auxPoint = auxPoint + 2 * coordinates.y + 1;
+				} else {
 					coordinates.x--;
-					auxPoint= auxPoint + 2*coordinates.y-2*coordinates.x+1;
+					auxPoint = auxPoint + 2 * coordinates.y - 2 * coordinates.x + 1;
 				}
 
-				if(coordinates.x<coordinates.y){
-					ring[count]=new Vector2Int(73,0);
-					return ring;
+				if (coordinates.x < coordinates.y) {
+					break; // Correct early return by breaking the loop
 				}
-				
-				
-				ring[count]=coordinates;
-				count++;
-				ring[count]=new Vector2Int(-coordinates.x, coordinates.y);
-				count++;
-				ring[count]=new Vector2Int(coordinates.x, -coordinates.y);
-				count++;
-				ring[count]=new Vector2Int(-coordinates.x, -coordinates.x);
-				count++;
 
+				// Use new instances of Vector2Int for each coordinate
+				ring[count++] = new Vector2Int(coordinates.x, coordinates.y);
+				ring[count++] = new Vector2Int(-coordinates.x, coordinates.y);
+				ring[count++] = new Vector2Int(coordinates.x, -coordinates.y);
+				ring[count++] = new Vector2Int(-coordinates.x, -coordinates.y);
 
-				if(coordinates.x!=coordinates.y){
-					ring[count]=new Vector2Int(coordinates.y, coordinates.x);
-					count++;
-					ring[count]=new Vector2Int(-coordinates.y, coordinates.x);
-					count++;
-					ring[count]=new Vector2Int(coordinates.y, -coordinates.x);
-					count++;
-					ring[count]=new Vector2Int(-coordinates.y, -coordinates.x);
-					count++;
+				if (coordinates.x != coordinates.y) {
+					ring[count++] = new Vector2Int(coordinates.y, coordinates.x);
+					ring[count++] = new Vector2Int(-coordinates.y, coordinates.x);
+					ring[count++] = new Vector2Int(coordinates.y, -coordinates.x);
+					ring[count++] = new Vector2Int(-coordinates.y, -coordinates.x);
 				}
-        	}
-			
-			ring[count]=new Vector2Int(73,0);
+			}
+
+			// Add a marker at the end if needed
+			if (count < ring.Length) {
+				ring[count] = new Vector2Int(73, 0);
+			}
+
 			return ring;
 		}
 		public static Vector2Int[] GetFlatRingMatrix(){

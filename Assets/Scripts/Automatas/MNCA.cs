@@ -8,6 +8,8 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 using System.Dynamic;
+using UnityEngine.AI;
+using System.Runtime.InteropServices;
 
 
 
@@ -19,6 +21,8 @@ public class MNCA : MonoBehaviour
     
     public ComputeShader compute;
 
+    public float checkAvgs=0;
+    [Range(0,15)] public int debuggerVar;
     
     
     private bool usePingBuffer = true;
@@ -28,7 +32,7 @@ public class MNCA : MonoBehaviour
 
     public Renderer render;
 
-    [Range(0,3)]public int kernelToggle=2;
+    [Range(0,4)]public int kernelToggle=0;
     
 
     private int[][] randomDataStorage;
@@ -46,6 +50,8 @@ public class MNCA : MonoBehaviour
     //Mutation strenght
     public GameObject mutationStrengthCounter;
     private Text mutationStrengthText;
+    public GameObject fpsCounter;
+    private Text fpsText;
 
 
     //framestep and pause
@@ -55,9 +61,24 @@ public class MNCA : MonoBehaviour
     
 
     //slowdown frames
-    public float updateInterval = 1.0f;
+    [Range(0f,1f)]public float updateInterval = 0.1f;
+    [Range(0f, 1f)]private float updateIntervalRemap =1f;
+    [Range(0f, 1f)] private float displayValue;
+
+    
+
+
+    ComputeBuffer ParametersBuffer;
 
     private float timer= 0.0f;
+
+    [Range(1,12)]public int counter1Value = 8; 
+
+
+    public GameObject amountOfNeighborhoods;
+
+
+
 
     public void Start()
     {
@@ -82,19 +103,21 @@ public class MNCA : MonoBehaviour
         compute.SetInt("width", pingBuffer.width);
         compute.SetInt("height", pingBuffer.height);
 
+        
 
 
-        SendRandomData(23,0);
-        SendRandomData(23,1);
-        SendRandomData(23,2);
-        SendRandomData(23,3);
+        SendRandomData(32,0);
+        SendRandomData(32,1);
+        SendRandomData(32,2);
+        SendRandomData(32,3);
 
        
         
         mutationStrengthText= mutationStrengthCounter.GetComponent<Text>();
         mutationStrengthText.text=$"{(int)mutationStrength}";
 
-        
+        fpsText= fpsCounter.GetComponent<Text>();
+        fpsText.text=$"{(int)updateIntervalRemap}";
 
         //Sends the preset neighborhood offsets
         Vector2Int[] flatRingMatrix=AutomataHelper.GetFlatRingMatrix();
@@ -104,17 +127,30 @@ public class MNCA : MonoBehaviour
         compute.SetBuffer(1,"NeighborhoodPreCalc", neighborhoodPreCalc);
         compute.SetBuffer(2,"NeighborhoodPreCalc", neighborhoodPreCalc);
         compute.SetBuffer(3,"NeighborhoodPreCalc", neighborhoodPreCalc);
+        compute.SetBuffer(4,"NeighborhoodPreCalc", neighborhoodPreCalc);
+
+       
+        uint[] ringSizesArray= {
+        1, 8, 12, 16, 24, 28, 36, 40,
+        44, 52, 56, 64, 68, 72, 80, 84
+        };
+
+        ComputeBuffer ringSizes= ComputeBufferManager.CreateBuffer(16, sizeof(int));
+        ringSizes.SetData(ringSizesArray);
+        compute.SetBuffer(1,"ringSizes", ringSizes);
+        compute.SetBuffer(2,"ringSizes", ringSizes);
+        compute.SetBuffer(3,"ringSizes", ringSizes);
+        compute.SetBuffer(4,"ringSizes", ringSizes);
+
         
-
-        Debug.Log(131&1);
-
+    
 
     }
 
     private int threadRegion;
     void Update()
     {
-    // Calculate mouse position in texture space
+        //Sets shader data --------------------------------------------------------------------------------------------------
         float mouSex = Input.mousePosition.x * ((float)noise.width / Screen.width);
         float mouSey = Input.mousePosition.y * ((float)noise.height / Screen.height);
 
@@ -124,7 +160,22 @@ public class MNCA : MonoBehaviour
         compute.SetBool("clickedLeft", Input.GetMouseButton(0));
         compute.SetBool("clickedRight", Input.GetMouseButton(1));
 
+        compute.SetFloat("checkAVgs", checkAvgs);
+        compute.SetInt("debuggerVar", debuggerVar);
         
+        
+
+
+
+        //Mutation neighborhoods  toggler
+        Text neighborhoodCount=amountOfNeighborhoods.GetComponent<Text>();
+
+        compute.SetInt("counter1", counter1Value);
+        compute.SetInt("counter2", counter1Value*8);
+
+        neighborhoodCount.text=$"{counter1Value}";
+
+
         
 
         //HANDLES DATA -----------------------------------------------------------------------------------------------------------------------
@@ -134,7 +185,7 @@ public class MNCA : MonoBehaviour
         {
             for (int i = 0; i < 4; i++)
             {
-                SendRandomData(23, i);
+                SendRandomData(32, i);
             }
         }
         // Calculate the thread region based on mouse position
@@ -149,6 +200,14 @@ public class MNCA : MonoBehaviour
 
 
         //HANDLES SHADER--------------------------------------------------------------------------------------------------------------
+        timer+=Time.deltaTime;
+        //increase - decrease framrate and dispatch shader-----------------------------------------------------------
+        if(updateInterval<1 && updateInterval>0.0){
+
+            if(Input.GetKey(KeyCode.UpArrow)) updateInterval-=0.0007f;
+            if(Input.GetKey(KeyCode.DownArrow)) updateInterval+=0.0007f;
+        }
+
         if(Input.GetKeyDown(KeyCode.F)){
             frameStepMode=!frameStepMode;
         }
@@ -156,11 +215,8 @@ public class MNCA : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.G)){
             doStep=true;
         }
-
-
-        timer += Time.deltaTime;
         
-
+        
         if (updateInterval == 0.0f || timer >= updateInterval)
         {
             if(!frameStepMode || doStep==true){
@@ -183,12 +239,12 @@ public class MNCA : MonoBehaviour
             
             
         }
-
-
-        
         render.material.SetTexture("_MainTex", nextBuffer);
 
 
+        
+
+      
         // Adjust mutation strength based on horizontal input
         float horizontalInput = Input.GetAxis("Horizontal");
         if (horizontalInput > 0 && mutationStrength <= 60)
@@ -200,8 +256,12 @@ public class MNCA : MonoBehaviour
             mutationStrength -= 15 * Time.deltaTime * -horizontalInput;
         }
 
+
+
         // Update UI text
+        displayValue=updateIntervalRemap-updateInterval;
         mutationStrengthText.text = $"{(int)mutationStrength}";
+        fpsText.text=$"{displayValue:0.0}";
     }
     public void SetNeighborhoodBuffers(List<List<Vector2Int>> neighborhoodCoordinates){
         
@@ -301,7 +361,7 @@ public class MNCA : MonoBehaviour
 
 
 
-            ComputeBuffer randomDataBuffer= ComputeBufferManager.CreateBuffer(23, sizeof(int));
+            ComputeBuffer randomDataBuffer= ComputeBufferManager.CreateBuffer(32, sizeof(int));
 
 
             randomDataBuffer.SetData(randomDataStorage[i]);
@@ -321,11 +381,6 @@ public class MNCA : MonoBehaviour
         pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
         
     }
-
-    public void SetMutation(){
-        
-    }
-
 
     //takes a number and mutation strenght and flips a certain amount of bits depending on mutation strenght
     public int BitFlip(int number, int mutationStrength){
@@ -372,5 +427,19 @@ public class MNCA : MonoBehaviour
         }
 
         return number;
+    }
+
+
+    public void AddToAmountOfNeighborhoods(){
+        if(counter1Value<12){
+            counter1Value++;
+        }
+        
+    }
+
+    public void SubtractFromAmountOfNeighborhoods(){
+        if(counter1Value>1){
+            counter1Value--;
+        }
     }
 }

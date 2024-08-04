@@ -796,69 +796,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ResetPickedNeighboorhood
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ClickCell
-    methodName: OnImageClick
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -1179,7 +1119,79 @@ ScriptsOnlyBuild:
     methodName: OnImageClick
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
+    methodName: OpenMutationMode
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ClickCell
+    methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
     methodName: ToggleGrid
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2047,6 +2059,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2443,6 +2458,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ResetNeighborhood
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2644,6 +2662,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: OpenGridEditor
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2956,6 +2977,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: SaveNeighborhood
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -2977,6 +3001,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: GetMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -3040,6 +3070,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: GetMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -3085,6 +3118,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: GetMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -3214,6 +3250,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: ApplyNeighborhoods
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -3250,6 +3289,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: OpenPicker
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
@@ -3430,6 +3472,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ClickCell
     methodName: OnImageClick
+  - assembly: Assembly-CSharp
+    fullTypeName: MNCA
+    methodName: AddToAmountOfNeighborhoods
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: MNCA
+    methodName: SubtractFromAmountOfNeighborhoods
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   sceneClasses:
     Assets/Scenes/NeighborhoodMaker.unity:
     - Class: 1
@@ -3593,7 +3647,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionStayMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b711ba4d4282645a1b3759228be86508
+      Hash: 4d4eff3a2002970747a3e8cdaa85235d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MNCA
@@ -4307,7 +4361,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c64226969f896a68c02f80d86ceb504b
+      Hash: 397c2840ba7c6ef6f7fa656c104925af
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -4398,4 +4452,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/NeighborhoodMaker.unity
-  playerPath: C:/Users/Andres/Desktop/GridSpaceLinux/GridSpace_Linux2.0.x86_64
+  playerPath: C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0.x86_64
