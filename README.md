@@ -23,7 +23,4 @@ You can also mutate the whole thing in mutation mode, where you can generete new
 
 
 ## Downloading the build
-To download the build download the file in the [Build](Build) folder. An open the file with tis logo
-![GridSpae](/mdIMages/NhGreen.png)
-
-And thats it!
+To download the build download the file in the [Build](Build) folder. Extract the folder, go into it and open gri
