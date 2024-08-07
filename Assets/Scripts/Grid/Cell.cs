@@ -45,6 +45,15 @@ public class Cell : MonoBehaviour
 
     }
 
+    public void changeStateBool(){
+        if(this.state){
+            image.sprite=spriteOff;
+        }else{
+            image.sprite=spriteOn;
+        }
+        state=!state;
+    }
+
     
 
 

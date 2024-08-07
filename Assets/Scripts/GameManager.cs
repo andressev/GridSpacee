@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-// using ComputeShaderUtility;
 using UnityEngine;
 using AutomataUtilities;
-using UnityEditor;
-
 using UnityEngine.UI;
-using UnityEngine.Device;
-using Unity.VisualScripting;
-using UnityEngine.Rendering;
 using UnityEngine.EventSystems;
+using TMPro;
+using Unity.VisualScripting;
+
 
 
 public class GameManager : MonoBehaviour
@@ -27,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject mutationUI;
 
+    public GameObject UIScreen;
+
 
    
 
@@ -39,13 +37,21 @@ public class GameManager : MonoBehaviour
     private GridGenerator gridGen;
 
 
-    public int width;
-    public int height;
+    public TMP_InputField textField; 
 
+    MNCA mnca;
 
+    //Info Manager
+    public Transform textWindows;
+    public GameObject infoUI;
+    private int textWindowIndex=0;
 
-    // private List<Neighborhood> neighborhoodElection; 
+    //mutation info
+    public GameObject mutationInfo;
+    public GameObject mutationHandler;
 
+    //controls 
+    public GameObject controls;
     
 
     
@@ -53,18 +59,67 @@ public class GameManager : MonoBehaviour
     {
         neighborhoodCollection=new List<Neighborhood>();
         gridGen=grid.GetComponent<GridGenerator>();
+
+        mnca= simulation.GetComponent<MNCA>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.H)){
+            hideUI();
+        }
         
     }
+    //----------------------------------------------------------------------------------------------------------------------------------
+    //-----Input Neighborhod------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------------
+    public void SendSequence (string input){
+        string sequence = input;
+        
+
+        mnca.SetAutomaton(sequence);
+        
+    }
+
+    
+
+
 
     //----------------------------------------------------------------------------------------------------------------------------------
     //-----UI Managment------------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------------
+    public void GetNextTextWindow(){
+        if(textWindowIndex==3){
+            textWindows.GetChild(textWindowIndex).gameObject.SetActive(false);
+            infoUI.SetActive(false);
+            textWindowIndex=0;
+            textWindows.GetChild(textWindowIndex).gameObject.SetActive(true);
+            UIScreen.SetActive(true);
+
+
+        }else{
+            textWindows.GetChild(textWindowIndex).gameObject.SetActive(false);
+            textWindowIndex++;
+            textWindows.GetChild(textWindowIndex).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void GetInfo(){
+        UIScreen.SetActive(false);
+        infoUI.SetActive(true);
+    }
     
+    public void GetMutationInfo(){
+        mutationHandler.SetActive(false);
+        mutationInfo.SetActive(true);
+    }
+    public void HideMutationInfo(){
+        mutationInfo.SetActive(false);
+        mutationHandler.SetActive(true);
+    }
     public void GetMenu(){
 
         gridUI.SetActive(false);
@@ -73,11 +128,16 @@ public class GameManager : MonoBehaviour
         mutationUI.SetActive(false);
 
     }
+
+    //GridEditor
     public void OpenGridEditor(){
         menuUI.SetActive(false);
         gridUI.SetActive(true);
     }
 
+
+
+    //NH PICKER
     public void OpenPicker(){
         menuUI.SetActive(false);
         pickUI.SetActive(true);
@@ -90,22 +150,49 @@ public class GameManager : MonoBehaviour
     public void OpenMutationMode(){
         menuUI.SetActive(false);
         mutationUI.SetActive(true);
-        MNCA mnca= simulation.GetComponent<MNCA>();
-        mnca.kernelToggle=4;
-        mnca.SendRandomData(32,0);
-        mnca.SendRandomData(32,1);
-        mnca.SendRandomData(32,2);
-        mnca.SendRandomData(32,3);
+        
+        if(mnca.kernelToggle!=4) {
+
+            mnca.kernelToggle=4;
+            mnca.SendRandomData(32,0);
+            mnca.SendRandomData(32,1);
+            mnca.SendRandomData(32,2);
+            mnca.SendRandomData(32,3);
+        }
 
 
     }
 
-    public void ToggleGrid(){
-        EventSystem.current.SetSelectedGameObject(null);
-        if(UI.activeSelf){
-            UI.SetActive(false);
+
+    //Controls 
+    public void GetControls(){
+        menuUI.SetActive(false);
+        controls.SetActive(true);
+    }
+    public void HideControls(){
+        controls.SetActive(false);
+        menuUI.SetActive(true);
+    }
+
+
+    public void hideUI(){
+        if(UIScreen.activeSelf){
+            UIScreen.SetActive(false);
         }else{
-            UI.SetActive(true);
+            UIScreen.SetActive(true);
+        }
+    }
+
+    public void ToggleUI(){
+        EventSystem.current.SetSelectedGameObject(null);
+
+        if(infoUI.activeSelf==false){
+
+            if(UI.activeSelf){
+                UI.SetActive(false);
+            }else{
+                UI.SetActive(true);
+            }
         }
         
     }
@@ -120,7 +207,7 @@ public class GameManager : MonoBehaviour
     //Note for my scren width 1940x 1600 works
     //For QHD 1950 x 1420 works
     //For4k 2865x2116 works 
-
+    //For free aspect 1189x854 kinda works
     //Save neighborhood button
     public void SaveNeighborhood(){
         Debug.Log("save button click");
@@ -137,7 +224,7 @@ public class GameManager : MonoBehaviour
             Neighborhood nh= new Neighborhood(coordinates); 
 
            
-            StartCoroutine(TakeScreenshot(width,height, myCamera, nh));
+            StartCoroutine(TakeScreenshot(myCamera, nh));
 
             //Not sure if i want to acces the shaderManager here or later.
             // MNCA automataHandler= simulation.GetComponent<MNCA>();
@@ -156,7 +243,10 @@ public class GameManager : MonoBehaviour
         }
         
     }
-    IEnumerator TakeScreenshot(int width, int height, Camera myCamera, Neighborhood nh){
+    IEnumerator TakeScreenshot(Camera myCamera, Neighborhood nh){
+
+            int width=Screen.width/2;
+            int height=Screen.height;
 
 			yield return new WaitForEndOfFrame();
 			myCamera.targetTexture= RenderTexture.GetTemporary(width, height, 16);
@@ -165,7 +255,7 @@ public class GameManager : MonoBehaviour
 
 			RenderTexture renderTexture=myCamera.targetTexture;
 			Texture2D result= new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.ARGB32, false);
-			Rect rect       =  new Rect(0,0, renderTexture.width, renderTexture.height);
+			Rect rect       =  new Rect(Screen.width/4,0, renderTexture.width, renderTexture.height);
 			result.ReadPixels(rect, 0,0);
             result.Apply();
 			

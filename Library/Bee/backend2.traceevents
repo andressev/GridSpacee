@@ -1,277 +1,256 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1722760279038530, "dur":26295, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279064837, "dur":322, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279065211, "dur":478, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279066136, "dur":201, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/boot.config" }}
-,{ "pid":12345, "tid":0, "ts":1722760279066858, "dur":80, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1722760279068892, "dur":81, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/UnityPlayer.so" }}
-,{ "pid":12345, "tid":0, "ts":1722760279068986, "dur":124, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0.x86_64" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069124, "dur":72, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069207, "dur":203, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/config" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069424, "dur":73, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069585, "dur":124, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069722, "dur":72, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069806, "dur":118, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":0, "ts":1722760279069938, "dur":124, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":0, "ts":1722760279070076, "dur":147, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":0, "ts":1722760279070244, "dur":109, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":0, "ts":1722760279065714, "dur":5067, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279070782, "dur":193900, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279264685, "dur":569, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279265445, "dur":11172, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1722760279066114, "dur":4679, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1722760279070797, "dur":6555, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1722760279079423, "dur":781, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/csharpactions/boot.config_16d3.info" }}
-,{ "pid":12345, "tid":1, "ts":1722760279080209, "dur":192, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Linux64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1722760279080410, "dur":1625, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Linux64\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":1, "ts":1722760279082036, "dur":760, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Linux64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":1, "ts":1722760279083127, "dur":293, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279083422, "dur":273, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279083697, "dur":890, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279084589, "dur":588, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279085179, "dur":1959, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279087141, "dur":425, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279087567, "dur":1215, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":1, "ts":1722760279088852, "dur":137, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playerbd1b8570-inputdata.json" }}
-,{ "pid":12345, "tid":1, "ts":1722760279080207, "dur":9052, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/LinuxPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1722760279089598, "dur":92, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1722760279090383, "dur":165517, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/LinuxPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1722760279262691, "dur":137, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\LinuxPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1722760279262690, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1722760279262845, "dur":1741, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/boot.config" }}
-,{ "pid":12345, "tid":2, "ts":1722760279066210, "dur":4607, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1722760279070821, "dur":4287, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1722760279075108, "dur":2262, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1722760279077397, "dur":676, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
-,{ "pid":12345, "tid":2, "ts":1722760279077371, "dur":704, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":2, "ts":1722760279082491, "dur":5269, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":2, "ts":1722760279088060, "dur":555, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1722760279088987, "dur":1893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1722760279091027, "dur":234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1722760279091687, "dur":3176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1722760279095261, "dur":797, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/UnityPlayer.so" }}
-,{ "pid":12345, "tid":2, "ts":1722760279096075, "dur":34495, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/UnityPlayer.so" }}
-,{ "pid":12345, "tid":2, "ts":1722760279130806, "dur":10356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":2, "ts":1722760279141447, "dur":6903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1722760279148458, "dur":7113, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1722760279155676, "dur":8000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1722760279164010, "dur":7604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1722760279171797, "dur":11217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1722760279183559, "dur":12860, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":2, "ts":1722760279196704, "dur":68076, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1722760279066266, "dur":4571, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1722760279070841, "dur":4345, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1722760279075187, "dur":2288, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1722760279077475, "dur":648, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1722760279110705, "dur":672, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1722760279111462, "dur":8214, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1722760279120606, "dur":8752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279129549, "dur":12396, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279142246, "dur":6497, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279148861, "dur":7460, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279156785, "dur":9433, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279166366, "dur":15319, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279182445, "dur":13103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1722760279196149, "dur":68537, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1722760279066163, "dur":4638, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1722760279070806, "dur":4297, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1722760279075103, "dur":2270, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1722760279077374, "dur":832, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":4, "ts":1722760279136049, "dur":3227, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":4, "ts":1722760279139754, "dur":7991, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":4, "ts":1722760279147922, "dur":10067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1722760279158486, "dur":10957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1722760279169670, "dur":12590, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1722760279182950, "dur":12666, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/sharedassets0.resource" }}
-,{ "pid":12345, "tid":4, "ts":1722760279196219, "dur":68593, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1722760279066201, "dur":4610, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1722760279070814, "dur":4242, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1722760279075056, "dur":2560, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1722760279077617, "dur":650, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":5, "ts":1722760279153632, "dur":2290, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":5, "ts":1722760279156106, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1722760279156105, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1722760279156182, "dur":8243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1722760279164861, "dur":14522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1722760279180923, "dur":12815, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1722760279194609, "dur":3845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/level0.resS" }}
-,{ "pid":12345, "tid":5, "ts":1722760279198564, "dur":66184, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1722760279066248, "dur":4583, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1722760279070835, "dur":4296, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1722760279075132, "dur":2499, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1722760279077643, "dur":625, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
-,{ "pid":12345, "tid":6, "ts":1722760279077631, "dur":639, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":6, "ts":1722760279154533, "dur":3496, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":6, "ts":1722760279158518, "dur":10188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1722760279168808, "dur":11420, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1722760279181717, "dur":13669, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1722760279195962, "dur":4887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":6, "ts":1722760279200929, "dur":63789, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1722760279066297, "dur":4561, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1722760279070861, "dur":4290, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1722760279075151, "dur":2401, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1722760279077552, "dur":631, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":7, "ts":1722760279124196, "dur":5096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":7, "ts":1722760279129537, "dur":11406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":7, "ts":1722760279141110, "dur":8225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1722760279149460, "dur":6758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1722760279156602, "dur":8612, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1722760279165490, "dur":7412, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1722760279173263, "dur":9979, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1722760279183866, "dur":11508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":7, "ts":1722760279195998, "dur":3208, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":7, "ts":1722760279199287, "dur":65547, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1722760279066336, "dur":4557, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1722760279070895, "dur":4299, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1722760279075194, "dur":2170, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1722760279077368, "dur":793, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/x86_64/libmonobdwgc-2.0.so" }}
-,{ "pid":12345, "tid":8, "ts":1722760279113168, "dur":11898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/x86_64/libmonobdwgc-2.0.so" }}
-,{ "pid":12345, "tid":8, "ts":1722760279125190, "dur":12390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":8, "ts":1722760279137864, "dur":6886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":8, "ts":1722760279144937, "dur":7184, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1722760279152203, "dur":11477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1722760279164074, "dur":7737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1722760279171986, "dur":10450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1722760279183053, "dur":12558, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":8, "ts":1722760279196162, "dur":68517, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1722760279066383, "dur":4522, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1722760279070908, "dur":1170, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1722760279072078, "dur":5402, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1722760279077497, "dur":605, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
-,{ "pid":12345, "tid":9, "ts":1722760279077480, "dur":623, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":9, "ts":1722760279092916, "dur":6005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":9, "ts":1722760279099154, "dur":21327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279121305, "dur":8522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279129962, "dur":10354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279140800, "dur":4654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279145716, "dur":6883, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279152705, "dur":6633, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279160292, "dur":8641, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.PropertiesModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279169193, "dur":10589, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279181218, "dur":13464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1722760279195465, "dur":3304, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/level0" }}
-,{ "pid":12345, "tid":9, "ts":1722760279198866, "dur":65823, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1722760279066421, "dur":4498, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1722760279070920, "dur":6544, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1722760279077488, "dur":457, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
-,{ "pid":12345, "tid":10, "ts":1722760279077465, "dur":482, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":10, "ts":1722760279081853, "dur":6128, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":10, "ts":1722760279088117, "dur":680, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
-,{ "pid":12345, "tid":10, "ts":1722760279088115, "dur":684, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":10, "ts":1722760279089224, "dur":2821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":10, "ts":1722760279092348, "dur":422, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":10, "ts":1722760279093077, "dur":6078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":10, "ts":1722760279110564, "dur":761, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1722760279099559, "dur":11781, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279111692, "dur":8536, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279121518, "dur":9728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279131610, "dur":10554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279142275, "dur":7018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279149394, "dur":7086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279156862, "dur":9019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279166078, "dur":6977, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279173255, "dur":10097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1722760279183968, "dur":12427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":10, "ts":1722760279196687, "dur":68119, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1722760279066463, "dur":4469, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1722760279070933, "dur":6429, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1722760279077366, "dur":747, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/x86_64/libMonoPosixHelper.so" }}
-,{ "pid":12345, "tid":11, "ts":1722760279094534, "dur":4734, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/x86_64/libMonoPosixHelper.so" }}
-,{ "pid":12345, "tid":11, "ts":1722760279111890, "dur":62, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1722760279099576, "dur":12388, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279112867, "dur":8902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279121918, "dur":10687, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279132762, "dur":9611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279142669, "dur":5947, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279148785, "dur":6866, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279155789, "dur":7663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279163748, "dur":6759, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279170893, "dur":12336, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1722760279183734, "dur":12109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":11, "ts":1722760279196387, "dur":68305, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1722760279066503, "dur":4434, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1722760279070937, "dur":6423, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1722760279077373, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1722760279077478, "dur":62, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"WriteText Library/Bee/artifacts/LinuxPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":12, "ts":1722760279079330, "dur":8114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/app.info" }}
-,{ "pid":12345, "tid":12, "ts":1722760279087449, "dur":632, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":12, "ts":1722760279090458, "dur":69, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1722760279088554, "dur":1987, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":12, "ts":1722760279090640, "dur":308, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":12, "ts":1722760279091025, "dur":4014, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":12, "ts":1722760279096046, "dur":23803, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279120856, "dur":9693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279130874, "dur":84, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1722760279130963, "dur":10765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279142089, "dur":7896, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279150081, "dur":8582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279159118, "dur":11342, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279170671, "dur":12469, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1722760279183669, "dur":12824, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":12, "ts":1722760279196751, "dur":68034, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1722760279066527, "dur":4416, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1722760279070943, "dur":6424, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1722760279077373, "dur":656, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/x86_64/libmono-native.so" }}
-,{ "pid":12345, "tid":13, "ts":1722760279081079, "dur":52, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1722760279081593, "dur":6808, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/x86_64/libmono-native.so" }}
-,{ "pid":12345, "tid":13, "ts":1722760279088494, "dur":331, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1722760279088492, "dur":334, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1722760279089231, "dur":3196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1722760279092892, "dur":660, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0.x86_64" }}
-,{ "pid":12345, "tid":13, "ts":1722760279093583, "dur":5681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0.x86_64" }}
-,{ "pid":12345, "tid":13, "ts":1722760279099562, "dur":18492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279119090, "dur":5967, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279125163, "dur":13966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279139616, "dur":5847, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279145625, "dur":7048, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279152759, "dur":8127, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279161348, "dur":7910, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279169409, "dur":12591, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279182782, "dur":12754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1722760279196120, "dur":4356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":13, "ts":1722760279200680, "dur":64055, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1722760279066558, "dur":4391, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1722760279070950, "dur":6618, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1722760279077572, "dur":720, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":14, "ts":1722760279155691, "dur":3103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":14, "ts":1722760279159163, "dur":7781, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1722760279167053, "dur":11677, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1722760279179750, "dur":7280, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1722760279191950, "dur":241, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1722760279192197, "dur":5008, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/resources.assets" }}
-,{ "pid":12345, "tid":14, "ts":1722760279197274, "dur":67490, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1722760279066583, "dur":4373, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1722760279070956, "dur":6615, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1722760279077589, "dur":627, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
-,{ "pid":12345, "tid":15, "ts":1722760279077572, "dur":645, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":15, "ts":1722760279144440, "dur":2137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":15, "ts":1722760279146766, "dur":6527, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1722760279153425, "dur":9798, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1722760279163565, "dur":9724, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1722760279173682, "dur":109, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1722760279173921, "dur":8292, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1722760279182910, "dur":590, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Resources/UnityPlayer.png" }}
-,{ "pid":12345, "tid":15, "ts":1722760279183693, "dur":11930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Resources/UnityPlayer.png" }}
-,{ "pid":12345, "tid":15, "ts":1722760279196189, "dur":68629, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1722760279066611, "dur":4368, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1722760279070980, "dur":6481, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1722760279077464, "dur":328, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":16, "ts":1722760279081615, "dur":6446, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":16, "ts":1722760279088155, "dur":310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":16, "ts":1722760279088957, "dur":2393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":16, "ts":1722760279091500, "dur":693, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/config" }}
-,{ "pid":12345, "tid":16, "ts":1722760279092213, "dur":3784, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/MonoBleedingEdge/etc/config" }}
-,{ "pid":12345, "tid":16, "ts":1722760279108072, "dur":50, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1722760279096240, "dur":11945, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279108755, "dur":10886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279120512, "dur":7978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279128636, "dur":11031, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279139780, "dur":5688, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279145637, "dur":6585, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279152365, "dur":6887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279160042, "dur":9586, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279169977, "dur":11213, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279182234, "dur":13483, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpace_Linux/GridSpace_Linux2.0_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1722760279196285, "dur":68565, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1722760279279992, "dur":1016, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1723022604412874, "dur":28795, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604441681, "dur":349, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604442093, "dur":495, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604442705, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/level0" }}
+,{ "pid":12345, "tid":0, "ts":1723022604442815, "dur":200, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":0, "ts":1723022604442608, "dur":3500, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604446110, "dur":172809, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604618920, "dur":273, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604619193, "dur":65, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604619266, "dur":77, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604619557, "dur":12015, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1723022604443083, "dur":3041, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1723022604446129, "dur":8026, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1723022604457074, "dur":967, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/csharpactions/boot.config_16d3.info" }}
+,{ "pid":12345, "tid":1, "ts":1723022604458048, "dur":171, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Linux64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1723022604458237, "dur":235, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Linux64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":1, "ts":1723022604458766, "dur":192, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604458960, "dur":225, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604459188, "dur":340, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604459530, "dur":432, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604459963, "dur":627, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604460592, "dur":158, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604460751, "dur":371, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Andres\\Desktop\\GitHub\\2024 Personal\\Grid Space\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1723022604461189, "dur":126, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playerce309145-inputdata.json" }}
+,{ "pid":12345, "tid":1, "ts":1723022604458046, "dur":3429, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/LinuxPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1723022604461778, "dur":51, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1723022604462454, "dur":148805, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/LinuxPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1723022604617557, "dur":147, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\LinuxPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1723022604617557, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1723022604617725, "dur":1129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1723022604443158, "dur":2996, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1723022604446157, "dur":5207, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1723022604451365, "dur":2927, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1723022604454304, "dur":656, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":2, "ts":1723022604454293, "dur":668, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1723022604503666, "dur":2742, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1723022604506550, "dur":5477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1723022604512149, "dur":5250, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1723022604517514, "dur":4681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1723022604522774, "dur":7610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1723022604530749, "dur":6835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1723022604538050, "dur":7289, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1723022604545897, "dur":73035, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1723022604443125, "dur":3008, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1723022604446137, "dur":5178, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1723022604451315, "dur":2868, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1723022604454229, "dur":529, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1723022604454188, "dur":572, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1723022604471765, "dur":2367, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1723022604474333, "dur":4687, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604479208, "dur":2185, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604481571, "dur":3129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604484845, "dur":3703, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604488894, "dur":5132, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604494165, "dur":4009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604498285, "dur":4260, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604502905, "dur":4659, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604507746, "dur":4813, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604512744, "dur":6379, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604519687, "dur":3988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604523789, "dur":7949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604531996, "dur":6599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1723022604539005, "dur":7075, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/resources.assets" }}
+,{ "pid":12345, "tid":3, "ts":1723022604546429, "dur":72479, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1723022604443145, "dur":3001, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1723022604446150, "dur":5341, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1723022604451491, "dur":2703, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1723022604454235, "dur":621, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
+,{ "pid":12345, "tid":4, "ts":1723022604454199, "dur":659, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1723022604481723, "dur":2953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1723022604484862, "dur":3681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604488908, "dur":3835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604493070, "dur":3650, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604496912, "dur":4942, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604502079, "dur":4247, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604506484, "dur":4652, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604511474, "dur":4966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604516622, "dur":5684, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604522889, "dur":7832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604531218, "dur":6719, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1723022604538348, "dur":7807, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1723022604546492, "dur":72436, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1723022604443182, "dur":2979, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1723022604446166, "dur":5364, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1723022604451531, "dur":2648, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1723022604454180, "dur":911, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/x86_64/libmono-native.so" }}
+,{ "pid":12345, "tid":5, "ts":1723022604556841, "dur":5893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/x86_64/libmono-native.so" }}
+,{ "pid":12345, "tid":5, "ts":1723022604562800, "dur":56124, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1723022604443249, "dur":2925, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1723022604446179, "dur":5323, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1723022604451502, "dur":2750, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1723022604454253, "dur":726, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1723022604519447, "dur":4150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1723022604523794, "dur":6767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1723022604530945, "dur":7102, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1723022604538516, "dur":6731, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1723022604545720, "dur":73211, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1723022604443282, "dur":2910, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1723022604446199, "dur":5382, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1723022604451582, "dur":2743, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1723022604454326, "dur":737, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1723022604547645, "dur":2422, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1723022604550126, "dur":68799, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1723022604443315, "dur":2890, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1723022604446209, "dur":5254, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1723022604451464, "dur":2723, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1723022604454188, "dur":827, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":8, "ts":1723022604528779, "dur":3438, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":8, "ts":1723022604532317, "dur":6516, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1723022604539324, "dur":8417, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/level0" }}
+,{ "pid":12345, "tid":8, "ts":1723022604548101, "dur":70812, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1723022604443357, "dur":2859, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1723022604446220, "dur":1234, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1723022604447455, "dur":6794, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1723022604454250, "dur":725, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1723022604511322, "dur":2325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1723022604513809, "dur":6664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1723022604521172, "dur":7387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1723022604529065, "dur":4641, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1723022604533956, "dur":5190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1723022604540083, "dur":7679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":9, "ts":1723022604548048, "dur":70868, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1723022604443410, "dur":2830, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1723022604446242, "dur":7960, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1723022604454237, "dur":667, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1723022604454202, "dur":703, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1723022604482457, "dur":3336, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1723022604485885, "dur":4180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604490168, "dur":3519, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604493860, "dur":3805, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604497847, "dur":4393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604502513, "dur":4494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604507126, "dur":5327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604512593, "dur":5642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604519027, "dur":4554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604523786, "dur":8029, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604532094, "dur":7016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1723022604539762, "dur":8317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1723022604548188, "dur":70749, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1723022604443454, "dur":2795, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1723022604446250, "dur":7914, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1723022604454174, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1723022604455904, "dur":4078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/app.info" }}
+,{ "pid":12345, "tid":11, "ts":1723022604459985, "dur":329, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1723022604461081, "dur":1817, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1723022604462983, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":11, "ts":1723022604463437, "dur":1873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":11, "ts":1723022604465436, "dur":129, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1723022604465434, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1723022604465610, "dur":2199, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1723022604467931, "dur":242, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":11, "ts":1723022604468525, "dur":2129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":11, "ts":1723022604470834, "dur":294, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/UnityPlayer.so" }}
+,{ "pid":12345, "tid":11, "ts":1723022604471143, "dur":25312, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/UnityPlayer.so" }}
+,{ "pid":12345, "tid":11, "ts":1723022604496602, "dur":4825, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604501525, "dur":3334, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604505022, "dur":3684, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604508870, "dur":4595, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604513698, "dur":6915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604521181, "dur":8679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604530183, "dur":6625, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1723022604537088, "dur":6398, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":11, "ts":1723022604543828, "dur":75074, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1723022604443479, "dur":2790, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1723022604446269, "dur":7897, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1723022604454171, "dur":767, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/x86_64/libMonoPosixHelper.so" }}
+,{ "pid":12345, "tid":12, "ts":1723022604491537, "dur":55, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1723022604491664, "dur":3292, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/x86_64/libMonoPosixHelper.so" }}
+,{ "pid":12345, "tid":12, "ts":1723022604495052, "dur":4642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604499807, "dur":4597, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604504648, "dur":5025, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604509860, "dur":4382, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604514405, "dur":7041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604521999, "dur":8466, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604530859, "dur":7632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1723022604538929, "dur":8177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":12, "ts":1723022604547447, "dur":71482, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1723022604443503, "dur":2777, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1723022604446280, "dur":7895, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1723022604454200, "dur":496, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/x86_64/libmonobdwgc-2.0.so" }}
+,{ "pid":12345, "tid":13, "ts":1723022604464498, "dur":3981, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/x86_64/libmonobdwgc-2.0.so" }}
+,{ "pid":12345, "tid":13, "ts":1723022604468593, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/config" }}
+,{ "pid":12345, "tid":13, "ts":1723022604468812, "dur":1849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/config" }}
+,{ "pid":12345, "tid":13, "ts":1723022604470794, "dur":161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux.x86_64" }}
+,{ "pid":12345, "tid":13, "ts":1723022604470974, "dur":3469, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux.x86_64" }}
+,{ "pid":12345, "tid":13, "ts":1723022604474556, "dur":5093, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604479777, "dur":3679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604483576, "dur":3021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604486721, "dur":3156, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604490050, "dur":4000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604494200, "dur":4909, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604499217, "dur":4928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604504486, "dur":4438, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604509157, "dur":4581, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604513843, "dur":7476, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604521814, "dur":8132, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604530321, "dur":6346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1723022604537040, "dur":9364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":13, "ts":1723022604546864, "dur":72079, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1723022604443527, "dur":2762, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1723022604446290, "dur":7908, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1723022604454201, "dur":366, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":14, "ts":1723022604457918, "dur":2199, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":14, "ts":1723022604460219, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":14, "ts":1723022604461325, "dur":1558, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":14, "ts":1723022604462960, "dur":159, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
+,{ "pid":12345, "tid":14, "ts":1723022604462957, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1723022604463518, "dur":2031, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1723022604465630, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":14, "ts":1723022604465790, "dur":2754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":14, "ts":1723022604468676, "dur":202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":14, "ts":1723022604469294, "dur":2629, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":14, "ts":1723022604472566, "dur":5052, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604477756, "dur":1887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604479768, "dur":2893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604483209, "dur":2333, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604485757, "dur":3555, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604489553, "dur":4561, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604494238, "dur":4804, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604499159, "dur":3714, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604503658, "dur":4564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604508337, "dur":4590, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604513096, "dur":6735, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604520593, "dur":5797, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604526540, "dur":5346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604532175, "dur":6671, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1723022604539303, "dur":8840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/level0.resS" }}
+,{ "pid":12345, "tid":14, "ts":1723022604548210, "dur":70710, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1723022604443570, "dur":2726, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1723022604446297, "dur":8030, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1723022604454350, "dur":706, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.20f1\\Editor\\Data\\PlaybackEngines\\LinuxStandaloneSupport\\Variations\\linux64_player_nondevelopment_mono\\Data\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
+,{ "pid":12345, "tid":15, "ts":1723022604454328, "dur":728, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":15, "ts":1723022604535330, "dur":3912, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":15, "ts":1723022604540169, "dur":7363, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":15, "ts":1723022604547879, "dur":71026, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1723022604443607, "dur":2697, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1723022604446304, "dur":7886, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1723022604454196, "dur":629, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":16, "ts":1723022604480804, "dur":3831, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":16, "ts":1723022604484780, "dur":3822, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604488935, "dur":4026, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604493071, "dur":3409, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604496603, "dur":5092, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604501965, "dur":3711, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604505761, "dur":4737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604510595, "dur":4317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604515024, "dur":6325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.PropertiesModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604521842, "dur":7914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604530132, "dur":3896, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1723022604534139, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Andres/Desktop/GridSpaceLinux_Data/Resources/UnityPlayer.png" }}
+,{ "pid":12345, "tid":16, "ts":1723022604534365, "dur":2325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/Resources/UnityPlayer.png" }}
+,{ "pid":12345, "tid":16, "ts":1723022604537044, "dur":10411, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Andres/Desktop/GridSpaceLinux_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":16, "ts":1723022604547801, "dur":71121, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1723022604635059, "dur":1430, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

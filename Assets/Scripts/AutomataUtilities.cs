@@ -127,6 +127,15 @@ namespace AutomataUtilities{
 
 
 		}
+		public static void CopyToClipboard(string text)
+    	{
+        TextEditor te = new TextEditor
+        {
+            text = text
+        };
+        te.SelectAll();
+        te.Copy();
+    	}
 		public static RenderTexture PictureToRenderTexture(Texture2D tex){
 
 			RenderTexture renderTexture = new RenderTexture(tex.width, tex.height, 24);
@@ -232,7 +241,7 @@ namespace AutomataUtilities{
 			for(int n=0;  n<17; n++){
 				for(int m=0; m<93; m++){
 					ringArray[(n*93)+m]=ringMatrix[n][m];
-					Debug.Log($"{ringMatrix[n][m]}, {n*93+m}");
+					
 				}
 
 			}

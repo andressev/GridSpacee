@@ -10,6 +10,7 @@ using UnityEngine.Rendering;
 using System.Dynamic;
 using UnityEngine.AI;
 using System.Runtime.InteropServices;
+using System.Globalization;
 
 
 
@@ -42,8 +43,8 @@ public class MNCA : MonoBehaviour
 
 
     //Pingpong necessary variables
-    public RenderTexture pingBuffer;
-    public RenderTexture pongBuffer;
+    RenderTexture pingBuffer;
+    RenderTexture pongBuffer;
     RenderTexture currentBuffer;
     RenderTexture nextBuffer;
 
@@ -72,12 +73,22 @@ public class MNCA : MonoBehaviour
 
     private float timer= 0.0f;
 
-    [Range(1,12)]public int counter1Value = 8; 
+    [Range(1,12)]private int amountOfNhValue = 5; 
 
 
     public GameObject amountOfNeighborhoods;
 
 
+    private ComputeBuffer RandomDataBuffer0;
+    private ComputeBuffer RandomDataBuffer1;
+    private ComputeBuffer RandomDataBuffer2;
+    private ComputeBuffer RandomDataBuffer3;
+
+
+    public ComputeBuffer[] RandomDataBufferArray;
+
+
+    public bool mutateNeighborhoods=false;
 
 
     public void Start()
@@ -106,18 +117,18 @@ public class MNCA : MonoBehaviour
         
 
 
-        SendRandomData(32,0);
-        SendRandomData(32,1);
-        SendRandomData(32,2);
-        SendRandomData(32,3);
+        
 
        
-        
+        //UI variable text
         mutationStrengthText= mutationStrengthCounter.GetComponent<Text>();
         mutationStrengthText.text=$"{(int)mutationStrength}";
 
         fpsText= fpsCounter.GetComponent<Text>();
         fpsText.text=$"{(int)updateIntervalRemap}";
+
+
+
 
         //Sends the preset neighborhood offsets
         Vector2Int[] flatRingMatrix=AutomataHelper.GetFlatRingMatrix();
@@ -143,6 +154,22 @@ public class MNCA : MonoBehaviour
         compute.SetBuffer(4,"ringSizes", ringSizes);
 
         
+
+
+        //Setting buffers
+        RandomDataBuffer0=ComputeBufferManager.CreateBuffer(33,sizeof(int));
+        RandomDataBuffer1=ComputeBufferManager.CreateBuffer(33,sizeof(int));
+        RandomDataBuffer2=ComputeBufferManager.CreateBuffer(33,sizeof(int));
+        RandomDataBuffer3=ComputeBufferManager.CreateBuffer(33,sizeof(int));
+
+        RandomDataBufferArray=new ComputeBuffer[4];
+
+        RandomDataBufferArray[0]=RandomDataBuffer0;
+        RandomDataBufferArray[1]=RandomDataBuffer1;
+        RandomDataBufferArray[2]=RandomDataBuffer2;
+        RandomDataBufferArray[3]=RandomDataBuffer3;
+
+
     
 
     }
@@ -170,10 +197,10 @@ public class MNCA : MonoBehaviour
         //Mutation neighborhoods  toggler
         Text neighborhoodCount=amountOfNeighborhoods.GetComponent<Text>();
 
-        compute.SetInt("counter1", counter1Value);
-        compute.SetInt("counter2", counter1Value*8);
+        compute.SetInt("counter1", amountOfNhValue);
+        compute.SetInt("counter2", amountOfNhValue*8);
 
-        neighborhoodCount.text=$"{counter1Value}";
+        neighborhoodCount.text=$"{amountOfNhValue}";
 
 
         
@@ -201,13 +228,9 @@ public class MNCA : MonoBehaviour
 
         //HANDLES SHADER--------------------------------------------------------------------------------------------------------------
         timer+=Time.deltaTime;
-        //increase - decrease framrate and dispatch shader-----------------------------------------------------------
-        if(updateInterval<1 && updateInterval>0.0){
 
-            if(Input.GetKey(KeyCode.UpArrow)) updateInterval-=0.0007f;
-            if(Input.GetKey(KeyCode.DownArrow)) updateInterval+=0.0007f;
-        }
 
+        //frame step mode, step through frames 
         if(Input.GetKeyDown(KeyCode.F)){
             frameStepMode=!frameStepMode;
         }
@@ -215,6 +238,19 @@ public class MNCA : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.G)){
             doStep=true;
         }
+        
+
+        //increase - decrease framrate and dispatch shader-----------------------------------------------------------
+        if(updateInterval<=1 && updateInterval>=0.0){
+
+            if(Input.GetKey(KeyCode.UpArrow)) updateInterval-=0.0007f;
+            if(Input.GetKey(KeyCode.DownArrow)) updateInterval+=0.0007f;
+        }else if(updateInterval>1){
+            updateInterval=1;
+        }else if(updateInterval<0){
+            updateInterval=0;
+        }
+
         
         
         if (updateInterval == 0.0f || timer >= updateInterval)
@@ -239,10 +275,26 @@ public class MNCA : MonoBehaviour
             
             
         }
-        render.material.SetTexture("_MainTex", nextBuffer);
 
 
-        
+        //TOGGLE flash funcitonality
+        if(Input.GetKey(KeyCode.Alpha1)){
+
+            render.material.SetTexture("_MainTex", pingBuffer);
+        }else if(Input.GetKey(KeyCode.Alpha2)){
+
+            render.material.SetTexture("_MainTex", pongBuffer);
+        }else{
+
+            render.material.SetTexture("_MainTex", nextBuffer);
+        }
+
+    
+
+        //SAVE mutation data
+        if(Input.GetKeyDown(KeyCode.S)){
+            SaveAutomaton();
+        }
 
       
         // Adjust mutation strength based on horizontal input
@@ -268,6 +320,12 @@ public class MNCA : MonoBehaviour
         
 
         kernelToggle= neighborhoodCoordinates.Count-1; //Cause neighbrohood two starts at 1
+
+        
+        for (int i = 0; i < 4; i++){
+            SendRandomData(32, i);
+        }
+
 
         Debug.Log("kernel is"+kernelToggle);
 
@@ -300,13 +358,14 @@ public class MNCA : MonoBehaviour
     [Range(1,60)]public float mutationStrength=20;
     
     public int[] CreateRandomData(int amountOfInt32){
-        int[] randomData= new int [amountOfInt32];
+        int[] randomData= new int [amountOfInt32+1];
 
         System.Random rng= new System.Random();
 
         for(int i=0; i<amountOfInt32; i++){
             randomData[i]= rng.Next();
         }
+        randomData[amountOfInt32]=amountOfNhValue;
 
         return randomData;
 
@@ -316,18 +375,17 @@ public class MNCA : MonoBehaviour
     public void SendRandomData(int amountOfInt32, int regionIndex){
         int[] randomData=CreateRandomData(amountOfInt32);
 
-        ComputeBuffer randomDataBuffer= ComputeBufferManager.CreateBuffer(amountOfInt32, sizeof(int));
+        
 
-        randomDataBuffer.SetData(randomData);
+        RandomDataBufferArray[regionIndex].SetData(randomData);
 
-        compute.SetBuffer(kernelToggle, $"RandomDataBuffer{regionIndex}", randomDataBuffer);
+        compute.SetBuffer(kernelToggle, $"RandomDataBuffer{regionIndex}", RandomDataBufferArray[regionIndex]);
         
 
         randomDataStorage[regionIndex]=randomData;
 
 
-        pingBuffer=AutomataHelper.PictureToRenderTexture(noise);
-        pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
+        ReSeed();
 
        
     }
@@ -343,8 +401,8 @@ public class MNCA : MonoBehaviour
             }
             
             randomDataStorage[i]=(int[])randomDataStorage[baseIndexMutation].Clone();
-            for(int pick=0; pick<10; pick++){
-                int index= rng.Next(1,16);
+            for(int pick=0; pick<amountOfNhValue*2; pick++){
+                int index= rng.Next(1,amountOfNhValue*2);
                 randomDataStorage[i][index]=BitFlip(randomDataStorage[baseIndexMutation][index], mutationStrength);
 
             }
@@ -354,6 +412,16 @@ public class MNCA : MonoBehaviour
                 }
 
             }
+
+            if(mutateNeighborhoods){
+                
+
+                for(int number=0; number<4; number++ ){
+                    int index=rng.Next(24,27);
+                    randomDataStorage[i][index]=BitFlip(randomDataStorage[baseIndexMutation][index], mutationStrength);
+                }
+                
+            }
             
             
 
@@ -361,12 +429,12 @@ public class MNCA : MonoBehaviour
 
 
 
-            ComputeBuffer randomDataBuffer= ComputeBufferManager.CreateBuffer(32, sizeof(int));
+            
 
 
-            randomDataBuffer.SetData(randomDataStorage[i]);
+            RandomDataBufferArray[i].SetData(randomDataStorage[i]);
 
-            compute.SetBuffer(kernelToggle, $"RandomDataBuffer{i}", randomDataBuffer);
+            compute.SetBuffer(kernelToggle, $"RandomDataBuffer{i}", RandomDataBufferArray[i]);
 
 
 
@@ -377,9 +445,13 @@ public class MNCA : MonoBehaviour
         
 
 
+       ReSeed();
+        
+    }
+
+    public void ReSeed(){
         pingBuffer=AutomataHelper.PictureToRenderTexture(noise);
         pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
-        
     }
 
     //takes a number and mutation strenght and flips a certain amount of bits depending on mutation strenght
@@ -431,15 +503,84 @@ public class MNCA : MonoBehaviour
 
 
     public void AddToAmountOfNeighborhoods(){
-        if(counter1Value<12){
-            counter1Value++;
+        if(amountOfNhValue<12){
+            amountOfNhValue++;
+            for(int i=0; i<4; i++){
+                randomDataStorage[i][32]=amountOfNhValue;
+            }
         }
         
     }
 
     public void SubtractFromAmountOfNeighborhoods(){
-        if(counter1Value>1){
-            counter1Value--;
+        if(amountOfNhValue>1){
+            amountOfNhValue--;
+            for(int i=0; i<4; i++){
+                randomDataStorage[i][32]=amountOfNhValue;
+            }
         }
+    }
+
+    public void toggleMutateNeighborhoods(){
+        
+        mutateNeighborhoods=!mutateNeighborhoods;
+        
+    }
+
+
+
+
+    public string SaveAutomaton(){
+        int[] sequence=randomDataStorage[threadRegion];
+
+        string sequenceString="";
+
+
+        
+        for(int i=0; i<sequence.Length; i++){
+            sequenceString+=sequence[i]+",";
+        }
+
+        Debug.Log(sequenceString);
+        AutomataHelper.CopyToClipboard(sequenceString);
+        return sequenceString;
+    }
+
+    public void SetAutomaton(string sequenceString){
+        Debug.Log(sequenceString);
+        string[] parameterStr=sequenceString.Split(",");
+
+        int[] parameters = new int[33];
+
+        kernelToggle=4;
+
+
+
+        for(int i=0; i<33; i++){
+            Debug.Log(i);
+            if (int.TryParse(parameterStr[i], out int result)){
+                parameters[i] = result;
+            }
+            
+        }
+        
+
+        amountOfNhValue=parameters[32];
+
+        for(int i=0; i<4; i++){
+            randomDataStorage[i]=parameters;
+            RandomDataBufferArray[i].SetData(randomDataStorage[i]);
+            compute.SetBuffer(kernelToggle, $"RandomDataBuffer{i}", RandomDataBufferArray[i]);
+        }
+
+        ReSeed();
+    }
+
+    void OnApplicationQuit(){
+        foreach(ComputeBuffer buffer in RandomDataBufferArray){
+            buffer.Dispose();
+        }
+       
+
     }
 }
