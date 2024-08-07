@@ -23,4 +23,4 @@ You can also mutate the whole thing in mutation mode, where you can generete new
 
 
 ## Downloading the build
-To download the build download the file int the [Link text](BUILD) folder.
+To download the build download the file int the [Link text](Build) folder.
