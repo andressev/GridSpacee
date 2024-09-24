@@ -215,7 +215,7 @@ void SetNeighborsSum(inout sumRingNeighbors sumRings, StructuredBuffer<int2> coo
             }
 
             
-            if (inData[id + coord].x > 0) {
+            if (inData[id + coord].x >= 0.5) {
                 sumRings.sumsPerRing[i]++;
             }
         }
@@ -450,6 +450,10 @@ void ThreeNeighborhoods(uint3 id : SV_DispatchThreadID) {
         outputVal = 1;
     }
 
+    if(outputVal==0){
+        Result[id.xy] = float4(0.09178828, 0.245283, 0.1789958, 1);
+        
+    }
     Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
 
 }
@@ -549,9 +553,7 @@ void FourNeighborhoods(uint3 id : SV_DispatchThreadID) {
 }
 [numthreads(8,8,1)]
 void MutatationVariant(uint3 id : SV_DispatchThreadID){
-    bool spawn = (Input[id.xy].x > 0.5);
-    Input[id.xy] = spawn ? float4(1.0, 1.0, 1.0, 1.0) : float4(0.0, 0.0, 0.0, 1.0);
-
+    
     float avg[12]={0,0,0,0,0,0,0,0,0,0,0,0};
 
 
@@ -643,9 +645,15 @@ void MutatationVariant(uint3 id : SV_DispatchThreadID){
 
     float debugValue=ringSizes[debuggerVar]/checkAVgs;
     
+    // if(outputVal==0){
+    //     Result[id.xy] = float4(0.09178828, 0.995283, 0.9789958, 1);
+        
+    // }else{
+
+    //     Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
+    // }
     
     Result[id.xy] = float4(outputVal, outputVal, outputVal, 1);
-    
     
     
 

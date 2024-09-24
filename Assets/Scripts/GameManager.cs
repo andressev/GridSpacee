@@ -299,8 +299,9 @@ public class GameManager : MonoBehaviour
 
         }
         //Setting the mnca buufers
-        mnca.SetNeighborhoodBuffers(neighborhoodCoordinates);
+        
         mnca.Start();
+        mnca.SetNeighborhoodBuffers(neighborhoodCoordinates);
 
 
     }

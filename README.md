@@ -23,4 +23,5 @@ You can also mutate the whole thing in mutation mode, where you can generete new
 
 
 ## Downloading the build
-To download the build download the file in the [Build](Build) folder. Extract the folder, go into it and open gri
+To download the build download the file in the [Build](Build) folder. Extract the folder, go into it and open GridSpace. 
+

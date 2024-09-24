@@ -449,6 +449,7 @@ public class MNCA : MonoBehaviour
         
     }
 
+    //Re-seeds screem
     public void ReSeed(){
         pingBuffer=AutomataHelper.PictureToRenderTexture(noise);
         pongBuffer=AutomataHelper.PictureToRenderTexture(noise);
@@ -483,6 +484,8 @@ public class MNCA : MonoBehaviour
         return number;
     }
 
+
+    //Given a mutationStrengthCreates a 16 bit sequence de strenght defines the porbability of fliping each bit
     public int Make16BitMask(int mutationStrength){
 
         //mutationStrength should me max 50-60 percent if 100 it will flip back and forth so actually its stronger when 50-60
@@ -521,6 +524,7 @@ public class MNCA : MonoBehaviour
         }
     }
 
+
     public void toggleMutateNeighborhoods(){
         
         mutateNeighborhoods=!mutateNeighborhoods;
@@ -529,7 +533,7 @@ public class MNCA : MonoBehaviour
 
 
 
-
+    //Copies to clipboard the sequence of the automaton
     public string SaveAutomaton(){
         int[] sequence=randomDataStorage[threadRegion];
 
